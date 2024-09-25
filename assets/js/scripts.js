@@ -1,4 +1,4 @@
-const URL = "https://moonrehber.com";
+const URL = "http://localhost";
 
 document.addEventListener('DOMContentLoaded', function () {
     const menuItems = [
