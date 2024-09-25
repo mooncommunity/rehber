@@ -4,6 +4,7 @@ if (window.location.hostname === "localhost") {
 } else {
     URL = window.location.href;
 }
+URL = URL.replace(/\/$/, '');
 
 document.addEventListener('DOMContentLoaded', function () {
     const menuItems = [
