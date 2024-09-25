@@ -1,0 +1,330 @@
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.btn-purple {
+    background-color: #5f8ef6;
+}
+
+.btn-purple:hover,
+.btn-purple:active,
+.btn-purple:focus {
+    background-color: #4361ee;
+}
+
+.category-item {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#left-menu {
+    font-size: 10pt;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+#mainmenu {
+    margin: 0.2%;
+    border-bottom: 2px solid var(--border-color);
+}
+
+#right-sidebar,
+#left-sidebar {
+    height: 100vh;
+}
+
+#right-sidebar .nav-link,
+#left-sidebar .nav-link {
+    color: var(--link-color);
+}
+
+#right-sidebar .nav-link.active,
+#left-sidebar .nav-link.active {
+    color: var(--link-active-color);
+    font-weight: bold;
+}
+
+#theme-toggle,
+#bd-theme {
+    bottom: 20px !important;
+    position: fixed !important;
+    right: 20px !important;
+    z-index: 1050;
+}
+
+#theme-toggle svg {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+[data-bs-theme="dark"] #theme-toggle svg {
+    fill: white;
+}
+
+[data-bs-theme="light"] #theme-toggle svg {
+    fill: #070707;
+}
+
+.left-menu .dropdown-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: var(--link-color);
+    font-size: 12pt;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left-menu .dropdown-toggle-btn::after {
+    content: "\25BC";
+    font-size: 12pt;
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+.left-menu .dropdown-toggle-btn.collapsed::after {
+    transform: rotate(180deg);
+}
+
+.left-menu .nav-item {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.nav-link-container {
+    margin-bottom: 1%;
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-menu-container {
+    display: none;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    padding: 0;
+    list-style-type: none;
+}
+
+.dropdown-item-container {
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color-light);
+    white-space: normal;
+    word-wrap: break-word;
+    width: 100%;
+}
+
+.item-container {
+    display: none;
+}
+
+.item-container.show {
+    display: block;
+}
+#left-menu .nav-item, #left-menu .nav-link, #left-menu .dropdown-wrapper {
+    height: 100%;
+    width: 100%;
+}
+#left-menu .nav-link-container:hover, #left-menu .dropdown-item-container:hover {
+    background-color: var(--dropdown-hover-bg);
+}
+
+@media (max-width: 767px) {
+    #left-sidebar {
+        display: none;
+    }
+
+    .navbar-nav {
+        display: flex;
+    }
+
+    #mainmenu {
+        margin: 0;
+    }
+    .category-item {
+        padding: 7px 12px;
+        text-align: inherit;
+        margin: 0.5rem;
+        font-style: italic;
+    }
+
+    .dropdown-menu-container {
+        position: static;
+        width: 100%;
+        padding: 0;
+    }
+    .item-container {
+        position: static;
+        width: 100%;
+        padding: 10px;
+        background-color: #ffffff;
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+        [data-bs-theme="dark"] & {
+            background-color: #2b2b2b;
+            border: 1px solid #444444;
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    .dropdown-item-container {
+        padding: 5px 10px;
+        border-bottom: 0;
+    }
+
+}
+
+@media (min-width: 768px) {
+    #left-sidebar {
+        display: block;
+    }
+
+    #mainmenu img {
+        margin-left: 1.50%;
+    }
+
+    .navbar-nav {
+        display: none;
+    }
+}
+
+nav {
+    margin-bottom: 0.5% !important;
+}
+
+#left-sidebar, #right-sidebar {
+    position: sticky;
+    top: 5%;
+    overflow-y: auto;
+}
+
+.content-ref-box {
+    border: 1px solid var(--border-color-light);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.content-ref-box:hover {
+    border-color: var(--link-color);
+}
+
+.content-ref-box a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content-ref-box a:hover {
+    color: var(--link-active-color);
+}
+
+
+:root {
+    --link-color: #24292e;
+    --link-active-color: #0366d6;
+    --border-color: #e1e4e8;
+    --border-color-light: #f6f8fa;
+    --scrollbar-track: #f1f3f5;
+    --scrollbar-thumb: #d1d5da;
+    --scrollbar-thumb-hover: #6a737d;
+    --dropdown-hover-bg: #f0f0f0;
+    --header-color: #fd6060;
+}
+
+[data-bs-theme="dark"] {
+    --link-color: #cdd9e5;
+    --link-active-color: #539bf5;
+    --border-color: #373e47;
+    --border-color-light: #2f363d;
+    --scrollbar-track: #2b3036;
+    --scrollbar-thumb: #636e7b;
+    --scrollbar-thumb-hover: #768390;
+    --dropdown-hover-bg: #1b1f24;
+    --header1: #3B82F6;
+    --header2: #06B6D4;
+    --header3: #FCA5A1;
+    --header4: #A78BFA;
+    --header5: #FBBF24;
+}
+
+[data-bs-theme="light"] {
+    --link-color: #24292e;
+    --link-active-color: #0366d6;
+    --border-color: #e1e4e8;
+    --border-color-light: #f6f8fa;
+    --scrollbar-track: #f1f3f5;
+    --scrollbar-thumb: #d1d5da;
+    --scrollbar-thumb-hover: #6a737d;
+    --dropdown-hover-bg: #f0f0f0;
+    --header1: #3B82F6;
+    --header2: #10B981;
+    --header3: #F87171;
+    --header4: #A855F7;
+    --header5: #FB923C;
+}
+.content h1 {
+    color: var(--header1);
+}
+.content h2 {
+    color: var(--header2);
+}
+.content h3 {
+    color: var(--header3);
+}
+.content h4 {
+    color: var(--header4);
+}
+.content h5 {
+    color: var(--header5);
+}
+.size-1 {
+    font-size: 18px; /* H1 için yazı boyutu */
+}
+
+.size-2 {
+    font-size: 16px; /* H2 için yazı boyutu */
+}
+
+.size-3 {
+    font-size: 14px; /* H3 için yazı boyutu */
+}
+
+.size-4 {
+    font-size: 12px; /* H4 için yazı boyutu */
+}
+
+.size-5 {
+    font-size: 10px; /* H5 için yazı boyutu */
+}
+
+
+
+
+
