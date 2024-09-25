@@ -2,7 +2,7 @@ let URL;
 if (window.location.hostname === "localhost") {
     URL = "http://localhost";
 } else {
-    URL = window.location.href;
+    URL = window.location.hostname;
 }
 URL = URL.replace(/\/$/, '');
 
