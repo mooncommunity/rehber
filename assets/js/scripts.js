@@ -1,10 +1,4 @@
-let URL;
-if (window.location.hostname === "localhost") {
-    URL = "http://localhost";
-} else {
-    URL = window.location.hostname;
-}
-URL = URL.replace(/\/$/, '');
+const URL = "https://moonrehber.com";
 
 document.addEventListener('DOMContentLoaded', function () {
     const menuItems = [
