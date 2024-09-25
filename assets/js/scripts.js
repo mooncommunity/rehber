@@ -1,4 +1,9 @@
-const URL = "http://localhost";
+let URL;
+if (window.location.hostname === "localhost") {
+    URL = "http://localhost";
+} else {
+    URL = window.location.href;
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     const menuItems = [
