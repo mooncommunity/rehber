@@ -1,24 +1,62 @@
-const URL = "https://moonrehber.com";
+const URL = window.location.protocol + "//" + window.location.hostname;
+const currentUrl = URL + window.location.pathname;
+var SiteName = "MoonGaming Rehber"
+var SiteDescription = "Oyuncular için kapsamlı bilgiler ve ipuçları sunar. Oyun modları, stratejiler ve topluluk kaynaklarıyla oyun deneyiminizi geliştirin."
+
+function updateMetaTags(title = SiteName, description = SiteDescription) {
+    document.title = title;
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+        ogTitle.setAttribute('content', title);
+    } else {
+        const newOgTitle = document.createElement('meta');
+        newOgTitle.setAttribute('property', 'og:title');
+        newOgTitle.setAttribute('content', title);
+        document.head.appendChild(newOgTitle);
+    }
+
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+        ogDescription.setAttribute('content', description);
+    } else {
+        const newOgDescription = document.createElement('meta');
+        newOgDescription.setAttribute('property', 'og:description');
+        newOgDescription.setAttribute('content', description);
+        document.head.appendChild(newOgDescription);
+    }
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+        metaDescription.setAttribute('content', description);
+    } else {
+        const newMetaDescription = document.createElement('meta');
+        newMetaDescription.setAttribute('name', 'description');
+        newMetaDescription.setAttribute('content', description);
+        document.head.appendChild(newMetaDescription);
+    }
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     const menuItems = [
-        { id: 'homehome', text: 'Anasayfa', href: `${URL}/index.html`, icon: 'fas fa-home' },
-        { type: 'category', text: 'DarkRP', icon: 'fa-solid fa-gun' },
-        { id: 'darkrpnedir', text: 'DarkRP Nedir?', href: `${URL}/darkrp.html`, icon: 'fa-solid fa-gun' },
-        { id: 'darkrpkurallar', text: 'Oyun Kuralları', href: 'https://moonrp.com/oyunkurallari', icon: 'fas fa-book' },
+        { id: 'homehome', text: 'Anasayfa', href: `${URL}/index.html`, icon: 'fas fa-home', description: 'Ana sayfaya dön' },
+        { type: 'category', text: 'DarkRP', icon: 'fa-solid fa-gun', description: 'DarkRP ile ilgili bilgiler' },
+        { id: 'darkrpnedir', text: 'DarkRP Nedir?', href: `${URL}/darkrp.html`, icon: 'fa-solid fa-gun', description: 'DarkRP oyununu tanıtan sayfa' },
+        { id: 'darkrpkurallar', text: 'Oyun Kuralları', href: 'https://moonrp.com/oyunkurallari', icon: 'fas fa-book', target: '_blank', description: 'Oyun kurallarını görüntüle' },
         {
             id: 'darkrpwelcome',
             text: 'DarkRP Başlarken',
             href: `${URL}/darkrp-baslarken.html`,
             icon: 'fa-regular fa-hand',
+            description: 'DarkRP oynamaya başlamak için rehber',
             dropdown: [
-                { id: 'darkrpchromium', text: 'Chromium Nedir? Nasıl Chromium Geçerim?', href: `${URL}/darkrp-baslarken/chromium.html`, icon: 'fa-brands fa-chrome' },
-                { id: 'darkrpiletisim', text: 'Sohbet ve İletişim', href: `${URL}/darkrp-baslarken.html#chat`, icon: 'fas fa-comments' },
-                { id: 'darkrpphonee', text: 'Telefon Kullanımı', href: `${URL}/darkrp-baslarken.html#phone`, icon: 'fas fa-phone' },
-                { id: 'darkrpfamily', text: 'Aile Paylaşımı ile sunucuya nasıl katılırım?', href: `${URL}/darkrp-baslarken/sss.html#ailepaylasimi`, icon: 'fas fa-users' },
-                { id: 'darkrpgeforce', text: 'GeForce Now ile sunucuya nasıl katılırım?', href: `${URL}/darkrp-baslarken/sss.html#geforcenow`, icon: 'fas fa-cloud' },
-                { id: 'darkrplinux', text: 'Linux distrosu kullanıyorum nasıl sunucuya katılabilirim?', href: `${URL}/darkrp-baslarken/linux.html`, icon: 'fa-brands fa-linux' },
-                { id: 'darkrpsss', text: 'Sıkça Sorulan Sorular', href: `${URL}/darkrp-baslarken/sss.html`, icon: 'fas fa-question' }
+                { id: 'darkrpchromium', text: 'Chromium Nedir? Nasıl Chromium Geçerim?', href: `${URL}/darkrp-baslarken/chromium.html`, icon: 'fa-brands fa-chrome', description: 'Chromium hakkında bilgi' },
+                { id: 'darkrpiletisim', text: 'Sohbet ve İletişim', href: `${URL}/darkrp-baslarken.html#chat`, icon: 'fas fa-comments', description: 'Sohbet ve iletişim yöntemleri' },
+                { id: 'darkrpphonee', text: 'Telefon Kullanımı', href: `${URL}/darkrp-baslarken.html#phone`, icon: 'fas fa-phone', description: 'Oyun içinde telefon kullanımı' },
+                { id: 'darkrpfamily', text: 'Aile Paylaşımı ile sunucuya nasıl katılırım?', href: `${URL}/darkrp-baslarken/sss.html#ailepaylasimi`, icon: 'fas fa-users', description: 'Aile paylaşımı ile katılım rehberi' },
+                { id: 'darkrpgeforce', text: 'GeForce Now ile sunucuya nasıl katılırım?', href: `${URL}/darkrp-baslarken/sss.html#geforcenow`, icon: 'fas fa-cloud', description: 'GeForce Now kullanarak katılım' },
+                { id: 'darkrplinux', text: 'Linux distrosu kullanıyorum nasıl sunucuya katılabilirim?', href: `${URL}/darkrp-baslarken/linux.html`, icon: 'fa-brands fa-linux', description: 'Linux kullanarak katılım rehberi' },
+                { id: 'darkrpsss', text: 'Sıkça Sorulan Sorular', href: `${URL}/darkrp-baslarken/sss.html`, icon: 'fas fa-question', description: 'Sıkça sorulan sorular' }
             ]
         },
         {
@@ -26,30 +64,29 @@ document.addEventListener('DOMContentLoaded', function () {
             text: 'DarkRP Kariyer',
             href: `${URL}/darkrp-kariyer.html`,
             icon: 'fa-solid fa-user-graduate',
+            description: 'DarkRP kariyer seçenekleri',
             dropdown: [
-                { id: 'darkrplegal', text: 'Devlet Çalışanı', href: `${URL}/darkrp-kariyer/legal.html`, icon: 'fa-solid fa-walkie-talkie' },
-                { id: 'darkrpesnaf', text: 'Esnaf ve Siviller', href: `${URL}/darkrp-kariyer/esnaf.html`, icon: 'fa-solid fa-scale-balanced' },
-                { id: 'darkrpillegal', text: 'Yasadışı Organizasyonlar', href: `${URL}/darkrp-kariyer/illegal.html`, icon: 'fa-solid fa-user-tie' },
+                { id: 'darkrplegal', text: 'Devlet Çalışanı', href: `${URL}/darkrp-kariyer/legal.html`, icon: 'fa-solid fa-walkie-talkie', description: 'Devlet çalışanı olma rehberi' },
+                { id: 'darkrpesnaf', text: 'Esnaf ve Siviller', href: `${URL}/darkrp-kariyer/esnaf.html`, icon: 'fa-solid fa-scale-balanced', description: 'Esnaf ve sivil seçenekleri' },
+                { id: 'darkrpillegal', text: 'Yasadışı Organizasyonlar', href: `${URL}/darkrp-kariyer/illegal.html`, icon: 'fa-solid fa-user-tie', description: 'Yasadışı organizasyonlar hakkında bilgi' },
             ]
         },
-        { type: 'category', text: 'Konu Dışı', icon: 'fa-solid fa-person-circle-question' },
-        { id: 'discordid', text: 'Discord ID nasıl öğrenebilirim?', href: `${URL}/discordid.html`, icon: 'fa-brands fa-discord' },
-        { type: 'category', text: 'Faydalı Bağlantılar', icon: 'fa-solid fa-arrow-up-right-from-square' },
-        { id: 'mg', text: 'MoonGaming', href: 'https://moonrp.com', icon: 'fa-solid fa-moon' },
-        { id: 'mgdiscord', text: 'MoonGaming - Discord', href: 'https://discord.gg/moongaming', icon: 'fa-brands fa-discord' },
-        { id: 'mgmarket', text: 'MoonGaming - Market', href: 'https://moonrp.com/market', icon: 'fa-solid fa-shop' },
-        { id: 'mgshopier', text: 'MoonGaming - Shopier', href: 'https://www.shopier.com/ShowProductNew/storefront.php?shop=MoonGamingTR', icon: 'fa-solid fa-cart-shopping' },
-        { id: 'steamidfinder', text: 'Steam ID Bulucu', href: 'https://www.steamidfinder.com/', icon: 'fa-regular fa-id-card' },
+        { type: 'category', text: 'Konu Dışı', icon: 'fa-solid fa-person-circle-question', description: 'Konu dışı içerikler' },
+        { id: 'discordid', text: 'Discord ID nasıl öğrenebilirim?', href: `${URL}/discordid.html`, icon: 'fa-brands fa-discord', description: 'Discord ID öğrenme rehberi' },
+        { type: 'category', text: 'Faydalı Bağlantılar', icon: 'fa-solid fa-arrow-up-right-from-square', description: 'Faydalı bağlantılar' },
+        { id: 'mg', text: 'MoonGaming', href: 'https://moonrp.com', icon: 'fa-solid fa-moon', target: '_blank', description: 'MoonGaming ana sayfası' },
+        { id: 'mgdiscord', text: 'MoonGaming - Discord', href: 'https://discord.gg/moongaming', icon: 'fa-brands fa-discord', target: '_blank', description: 'MoonGaming Discord sunucusu' },
+        { id: 'mgmarket', text: 'MoonGaming - Market', href: 'https://moonrp.com/market', icon: 'fa-solid fa-shop', target: '_blank', description: 'MoonGaming market sayfası' },
+        { id: 'mgshopier', text: 'MoonGaming - Shopier', href: 'https://www.shopier.com/ShowProductNew/storefront.php?shop=MoonGamingTR', icon: 'fa-solid fa-cart-shopping', target: '_blank', description: 'MoonGaming Shopier sayfası' },
+        { id: 'steamidfinder', text: 'Steam ID Bulucu', href: 'https://www.steamidfinder.com/', icon: 'fa-regular fa-id-card', target: '_blank', description: 'Steam ID bulma aracı' },
     ];
 
     const leftMenu = document.getElementById('left-menu');
     const topMenu = document.getElementById('top-menu');
     const rightMenu = document.getElementById('right-menu');
-    const currentUrl = window.location.href;
 
     menuItems.forEach(item => {
         const mobileID = `${item.id}-mobile`;
-
         if (item.type === 'category') {
             const categoryItem = document.createElement('li');
             categoryItem.classList.add('category-item', 'nav-link');
@@ -57,9 +94,9 @@ document.addEventListener('DOMContentLoaded', function () {
             leftMenu.appendChild(categoryItem);
             topMenu.appendChild(categoryItem.cloneNode(true));
         } else {
+
             const menuItem = document.createElement('li');
             menuItem.classList.add('nav-item');
-
             const menuItemContainer = document.createElement('div');
             menuItemContainer.classList.add('nav-link-container', 'd-flex', 'justify-content-between', 'align-items-center');
 
@@ -68,6 +105,9 @@ document.addEventListener('DOMContentLoaded', function () {
             linkElement.setAttribute('id', item.id);
             linkElement.setAttribute('href', item.href);
             linkElement.innerHTML = `<i class="${item.icon}"></i> ${item.text}`;
+            if (item.target) {
+                linkElement.setAttribute('target', item.target);
+            }
             menuItemContainer.appendChild(linkElement);
 
             if (item.dropdown) {
@@ -166,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function updateActiveClass() {
-        const currentUrl = window.location.href.split('#')[0]; // Hash hariç URL
+        // // Hash hariç URL
         const links = rightMenu.querySelectorAll('.nav-link');
         const allMenuLinks = document.querySelectorAll('#top-menu .nav-link, #left-menu .nav-link');
 
@@ -176,7 +216,9 @@ document.addEventListener('DOMContentLoaded', function () {
         allMenuLinks.forEach(link => {
             if (link.getAttribute('href') === currentUrl) {
                 link.classList.add('active');
-
+                if (!SiteName.includes(link.textContent)) {
+                    SiteName = link.textContent + " - " + SiteName;
+                }
                 const parentItem = link.closest('.dropdown-wrapper');
                 if (parentItem) {
                     const dropdownDiv = parentItem.querySelector('.item-container');
@@ -199,4 +241,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('hashchange', updateActiveClass);
     updateActiveClass();
+    updateMetaTags();
 });

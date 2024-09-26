@@ -55,6 +55,7 @@ body {
     color: var(--link-color);
 }
 
+#top-menu .nav-link.active,
 #right-sidebar .nav-link.active,
 #left-sidebar .nav-link.active {
     color: var(--link-active-color);
