@@ -6,16 +6,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="robots" content="index, follow">
 
-    <meta name="description" content="Oyuncular için kapsamlı bilgiler ve ipuçları sunar. Oyun modları, stratejiler ve topluluk kaynaklarıyla oyun deneyiminizi geliştirin.">
+    <meta name="description"
+          content="Oyuncular için kapsamlı bilgiler ve ipuçları sunar. Oyun modları, stratejiler ve topluluk kaynaklarıyla oyun deneyiminizi geliştirin.">
     <meta name="keywords" content="MoonGaming, DarkRP, TTT, Murder, rehber, oyun, strateji, MoonRP">
 
-    <meta property="og:title" content="MoonGaming Rehber">
-    <meta property="og:description" content="MoonGaming rehberi ile oyun hakkında bilgi edinin ve en iyi stratejileri öğrenin.">
+    <meta property="og:title" content="Anasayfa - MoonGaming Rehber">
+    <meta property="og:description"
+          content="MoonGaming rehberi ile oyun hakkında bilgi edinin ve en iyi stratejileri öğrenin.">
     <meta property="og:image" content="https://moonrehber.com/assets/image/og-image.jpg">
     <meta property="og:url" content="https://moonrehber.com">
     <meta property="og:type" content="website">
 
-    <title>MoonGaming Rehber</title>
+    <title>Anasayfa - MoonGaming Rehber</title>
 
     <link rel="icon" type="image/x-icon" href="https://www.moonrp.com/images/aykafa.ico">
 
@@ -36,6 +38,42 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto" id="top-menu">
+
+            </ul>
+        </div>
+        <div id="theme-toggle" class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="bd-theme" role="button" aria-expanded="false" data-bs-toggle="dropdown">
+                <svg class="bi my-1 theme-icon-active">
+                    <use href="#circle-half"></use>
+                </svg>
+                <span class="d-lg-none ms-2" id="bd-theme-text"></span>
+                Tema
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                        <svg class="bi me-2 opacity-50">
+                            <use href="#sun-fill"></use>
+                        </svg>
+                        Aydınlık
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                        <svg class="bi me-2 opacity-50">
+                            <use href="#moon-stars-fill"></use>
+                        </svg>
+                        Karanlık
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto">
+                        <svg class="bi me-2 opacity-50">
+                            <use href="#circle-half"></use>
+                        </svg>
+                        Sistem
+                    </button>
+                </li>
             </ul>
         </div>
     </div>
@@ -62,9 +100,10 @@
                 </p>
                 <br>
                 <h3>Rehbere nasıl katkıda bulunabilirim?</h3>
-                <hr> <br>
+                <hr>
+                <br>
                 <p>
-                    Rehberimize katkıda bulunmak isterseniz, Michael & Tapkan ile iletişime geçebilirsiniz.
+                    Rehberimizin DarkRP ile ilgili bölümlerine katkıda bulunmak isterseniz, Michael & Tapkan ile iletişime geçebilirsiniz.
                 </p>
             </div>
         </main>
@@ -78,16 +117,20 @@
     </div>
 </div>
 
-<div id="theme-toggle" class="dropup-center dropup position-fixed bottom-0 end-0 p-3 d-lg-block">
-    <button class="btn btn-purple dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown">
-        <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
-        <span class="d-lg-none ms-2" id="bd-theme-text"></span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end">
-        <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"><svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg> Aydınlık</button></li>
-        <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"><svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg> Karanlık</button></li>
-        <li><button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"><svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg> Sistem</button></li>
-    </ul>
+<div id="mobileBookmarks">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">Başlıklar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="nav flex-column" id="offcanvas-right-menu"></ul>
+    </div>
+</div>
+
+<button class="btn btn-primary position-fixed bottom-0 end-0 m-3" id="toggle-offcanvas" aria-label="Toggle Content Menu">
+    <i class="fa-solid fa-bookmark"></i>
+</button>
 </div>
 
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">

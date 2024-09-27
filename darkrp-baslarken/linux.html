@@ -6,16 +6,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="robots" content="index, follow">
 
-    <meta name="description" content="Oyuncular için kapsamlı bilgiler ve ipuçları sunar. Oyun modları, stratejiler ve topluluk kaynaklarıyla oyun deneyiminizi geliştirin.">
-    <meta name="keywords" content="MoonGaming, DarkRP, TTT, Murder, rehber, oyun, strateji, MoonRP">
+    <meta name="description"
+          content="Proton, Linux'ta Windows oyunlarını çalıştırmak için optimize edilmiş bir uyumluluk aracıdır. Native Linux sürümleri için alternatif sunarken, native desteği olmayan oyunlarda performansı artırır ve geniş oyun yelpazesi sağlar">
+    <meta name="keywords" content="MoonGaming, DarkRP, TTT, Murder, rehber, oyun, strateji, MoonRP, Proton">
 
-    <meta property="og:title" content="MoonGaming Rehber">
-    <meta property="og:description" content="MoonGaming rehberi ile oyun hakkında bilgi edinin ve en iyi stratejileri öğrenin.">
+    <meta property="og:title" content="Linux distrosu kullanıyorum nasıl sunucuya katılabilirim? - MoonGaming Rehber">
+    <meta property="og:description"
+          content="Proton, Linux'ta Windows oyunlarını çalıştırmak için optimize edilmiş bir uyumluluk aracıdır. Native Linux sürümleri için alternatif sunarken, native desteği olmayan oyunlarda performansı artırır ve geniş oyun yelpazesi sağlar.">
     <meta property="og:image" content="https://moonrehber.com/assets/image/og-image.jpg">
     <meta property="og:url" content="https://moonrehber.com">
     <meta property="og:type" content="website">
 
-    <title>MoonGaming Rehber</title>
+    <title>Linux distrosu kullanıyorum nasıl sunucuya katılabilirim? - MoonGaming Rehber</title>
 
     <link rel="icon" type="image/x-icon" href="https://www.moonrp.com/images/aykafa.ico">
 
@@ -29,7 +31,6 @@
 <nav id="mainmenu" class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <div class="navbar-brand">
-
             <a class="navbar-brand" href="#"><img src="https://www.moonrp.com/images/aykafa.ico" height="32" width="32"> MoonGaming Rehber</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +38,42 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto" id="top-menu">
+
+            </ul>
+        </div>
+        <div id="theme-toggle" class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="bd-theme" role="button" aria-expanded="false" data-bs-toggle="dropdown">
+                <svg class="bi my-1 theme-icon-active">
+                    <use href="#circle-half"></use>
+                </svg>
+                <span class="d-lg-none ms-2" id="bd-theme-text"></span>
+                Tema
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                        <svg class="bi me-2 opacity-50">
+                            <use href="#sun-fill"></use>
+                        </svg>
+                        Aydınlık
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                        <svg class="bi me-2 opacity-50">
+                            <use href="#moon-stars-fill"></use>
+                        </svg>
+                        Karanlık
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto">
+                        <svg class="bi me-2 opacity-50">
+                            <use href="#circle-half"></use>
+                        </svg>
+                        Sistem
+                    </button>
+                </li>
             </ul>
         </div>
     </div>
@@ -55,28 +92,39 @@
                 <h1 class="mb-4">Linux distrosu kullanıyorum, nasıl sunucuya katılabilirim?</h1>
                 <hr>
                 <div class="alert alert-info" role="alert">
-                    <strong>Bilgi:</strong> Linux kullanıcıların bir sorun yaşaması halinde internetten araştırma yapması gerekmektedir. Bu rehber sadece oyuna nasıl bağlanabileceklerini anlatmaktadır.
+                    <strong>Bilgi:</strong> Linux kullanıcıların bir sorun yaşaması halinde internetten araştırma
+                    yapması gerekmektedir. Bu rehber sadece oyuna nasıl bağlanabileceklerini anlatmaktadır.
                 </div>
 
-                <p>Sunucumuza katılmanın iki yolu mevcuttur. Birincisi <a href="#native">Linux sürümünü</a> kullanmak, ikinci seçenek ise <a href="#proton">Uyumluluk modu (Proton ile Windows sürümü)</a> kullanmaktır.</p>
+                <p>Sunucumuza katılmanın iki yolu mevcuttur. Birincisi <a href="#native">Linux sürümünü</a> kullanmak,
+                    ikinci seçenek ise <a href="#proton">Uyumluluk modu (Proton ile Windows sürümü)</a> kullanmaktır.
+                </p>
 
-                <h2 id="native" >1. Native Sürüm</h2>
+                <h2 id="native">1. Native Sürüm</h2>
                 <p>İndirdiğiniz gibi kullanabilirsiniz.</p>
 
                 <h3>Oyun girdiğimde menüler gözükmüyor, nasıl çözebilirim?</h3>
 
                 <div class="alert alert-danger" role="alert">
-                    <strong>Uyarı:</strong> Bu adım üçüncü şahıs tarafından düzenleme içerir. Oyunun orijinal dosyasına müdahale eder. Bir sorun yaşanması halinde sorumluluk kabul edilmemektedir.
+                    <strong>Uyarı:</strong> Bu adım üçüncü şahıs tarafından düzenleme içerir. Oyunun orijinal dosyasına
+                    müdahale eder. Bir sorun yaşanması halinde sorumluluk kabul edilmemektedir.
                 </div>
 
-                <p><a href="https://github.com/solsticegamestudios/GModCEFCodecFix/releases">GModCEFCodecFix</a> ile oyunun açılışındaki menü sorununuzu çözebilirsiniz.</p>
+                <p><a href="https://github.com/solsticegamestudios/GModCEFCodecFix/releases">GModCEFCodecFix</a> ile
+                    oyunun açılışındaki menü sorununuzu çözebilirsiniz.</p>
 
                 <div class="alert alert-success" role="alert">
-                    <strong>GModCEFCodecFix Projesi Nedir?</strong> Bu projenin amacı Linux ve macOS kullanıcıların chromium menü sorununu çözmek, chromium sürümünü en güncel hale getirmek, H.264 (MP4) ve AAC gibi sahipli video/ses codec'lerini etkinleştirmek, yazılımsal WebGL desteği sunmak ve kısıtlı olarak GPU hızlandırma sunmaktır.
+                    <strong>GModCEFCodecFix Projesi Nedir?</strong> Bu projenin amacı Linux ve macOS kullanıcıların
+                    chromium menü sorununu çözmek, chromium sürümünü en güncel hale getirmek, H.264 (MP4) ve AAC gibi
+                    sahipli video/ses codec'lerini etkinleştirmek, yazılımsal WebGL desteği sunmak ve kısıtlı olarak GPU
+                    hızlandırma sunmaktır.
                 </div>
 
                 <ol>
-                    <li><a href="https://github.com/solsticegamestudios/GModCEFCodecFix/releases/latest/download/GModCEFCodecFix-Linux">GModCEFCodecFix-Linux</a> dosyasını indirdikten sonra terminalinizi açınız.</li>
+                    <li>
+                        <a href="https://github.com/solsticegamestudios/GModCEFCodecFix/releases/latest/download/GModCEFCodecFix-Linux">GModCEFCodecFix-Linux</a>
+                        dosyasını indirdikten sonra terminalinizi açınız.
+                    </li>
                     <li>GModCEFCodecFix-Linux dosyasının bulunduğu konuma gidiniz.</li>
                 </ol>
 
@@ -89,7 +137,8 @@ chmod +x GModCEFCodecFix-Linux
 </code></pre>
 
                 <h3>Peki, GModCEFCodecFix nasıl kaldırırım?</h3>
-                <p>Steam'dan oyun dosyalarının bütünlüğünü doğruladığınızda Steam değiştirilen dosyaları tekrar indirecektir.</p>
+                <p>Steam'dan oyun dosyalarının bütünlüğünü doğruladığınızda Steam değiştirilen dosyaları tekrar
+                    indirecektir.</p>
 
                 <h3>"Unable to load module engine_client.so" hatası alıyorum?</h3>
                 <p>OpenSSL sürümünüz GMod ile uyumsuz olmasından veya OpenSSL yüklü olmamasından kaynaklıdır.</p>
@@ -110,12 +159,15 @@ rm -r openssl-1.0.1u*
                 <p><a href="#proton">Uyumluluk Modunda</a> oynamayı deniyebilirsiniz.</p>
 
                 <h3 class="text-purple">Oyun içerisinde bazı simgeler \[] şeklinde ne yapmalıyım?</h3>
-                <p>Bu tamamen Windows fontlarıyla alakalı, Windows fontlarının tamamına sahip olmadığınızdan kaynaklı. <code>~/.local/share/fonts/</code> giderek eksik fontları bir şekilde tamamlamanız gerekmekte.</p>
+                <p>Bu tamamen Windows fontlarıyla alakalı, Windows fontlarının tamamına sahip olmadığınızdan kaynaklı.
+                    <code>~/.local/share/fonts/</code> giderek eksik fontları bir şekilde tamamlamanız gerekmekte.</p>
 
                 <hr>
 
                 <h2 id="proton">2. Uyumluluk modu (Proton)</h2>
-                <p>Oyunuzu uyumluluk moduna almanız gerekiyor. Peki Garry's Mod Linux sürümü sunmuyor mu? Evet, sunuyor fakat addonlarımızın birçoğu Windows'a göre ayarlanıyor. Olası sorunlarını minimalize etmek amacıyla uyumluluk modunda kullanmanızı öneriyoruz.</p>
+                <p>Oyunuzu uyumluluk moduna almanız gerekiyor. Peki Garry's Mod Linux sürümü sunmuyor mu? Evet, sunuyor
+                    fakat addonlarımızın birçoğu Windows'a göre ayarlanıyor. Olası sorunlarını minimalize etmek amacıyla
+                    uyumluluk modunda kullanmanızı öneriyoruz.</p>
 
                 <h3>Garry's Mod uyumluluk moduna nasıl alırım?</h3>
 
@@ -147,7 +199,9 @@ rm -r openssl-1.0.1u*
                 </table>
 
                 <h3 class="text-purple">Oyun içerisinde bazı simgeler \[] şeklinde ne yapmalıyım?</h3>
-            <p>Bu tamamen windows fontlarıyla alakalı windows fontların tamamına sahip olmadığınızdan kaynaklı. steamapps klasörüne giderek <code>compatdata/4000/pfx/driver_c/windows/fonts</code> giderek eksik fontları bir şekilde tamamlamanız gerekmekte.</p>
+                <p>Bu tamamen windows fontlarıyla alakalı windows fontların tamamına sahip olmadığınızdan kaynaklı.
+                    steamapps klasörüne giderek <code>compatdata/4000/pfx/driver_c/windows/fonts</code> giderek eksik
+                    fontları bir şekilde tamamlamanız gerekmekte.</p>
             </div>
         </main>
 
@@ -160,19 +214,21 @@ rm -r openssl-1.0.1u*
     </div>
 </div>
 
+<div id="mobileBookmarks">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Başlıklar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column" id="offcanvas-right-menu"></ul>
+        </div>
+    </div>
 
-<div id="theme-toggle" class="dropup-center dropup position-fixed bottom-0 end-0 p-3 d-lg-block">
-    <button class="btn btn-purple dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown">
-        <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
-        <span class="d-lg-none ms-2" id="bd-theme-text"></span>
+    <button class="btn btn-primary position-fixed bottom-0 end-0 m-3" id="toggle-offcanvas" aria-label="Toggle Content Menu">
+        <i class="fa-solid fa-bookmark"></i>
     </button>
-    <ul class="dropdown-menu dropdown-menu-end">
-        <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"><svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg> Aydınlık</button></li>
-        <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"><svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg> Karanlık</button></li>
-        <li><button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"><svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg> Sistem</button></li>
-    </ul>
 </div>
-
 
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
