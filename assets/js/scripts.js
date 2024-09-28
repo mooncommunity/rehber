@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // {type: 'category', text: 'Trouble in Terrorist Town', icon: 'fa-solid fa-user-secret'},
         // {id: 'tttnedir', text: 'TTT Nedir?', href: `${URL}/ttt.html`, icon: 'fa-solid fa-user-secret'},
+        // {id: 'tttkurallar', text: 'Oyun Kuralları', href: `https://moonrp.com/tttkurallar`, icon: 'fa-solid fa-book-skull', target: '_blank'},
         // {id: 'tttbaslarken', text: 'TTT Başlarken', href: `${URL}/ttt-baslarken.html`, icon: 'fa-solid fa-graduation-cap'},
 
         {type: 'category', text: 'Konu Dışı', icon: 'fa-solid fa-person-circle-question'},
