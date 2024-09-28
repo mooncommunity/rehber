@@ -180,8 +180,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 item.dropdown.forEach(sub => {
                     const dropdownItem = document.createElement('div');
                     dropdownItem.classList.add('dropdown-item-container');
+                    dropdownItem.setAttribute("id", `${sub.id}-d`)
                     dropdownItem.innerHTML = `
-                        <a class="nav-link" href="${sub.href}">
+                        <a class="nav-link" id="${sub.id}" href="${sub.href}">
                             <i class="${sub.icon}"></i> ${sub.text}
                         </a>`;
                     dropdownDiv.appendChild(dropdownItem);
@@ -190,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const dropdownBtn = document.createElement('button');
                 dropdownBtn.classList.add('dropdown-toggle-btn', 'btn');
                 dropdownBtn.setAttribute('aria-expanded', 'false');
-                dropdownBtn.innerHTML = `<i class="fas fa-chevron-down"></i>`;
+                dropdownBtn.innerHTML = `<i class="fas fa-chevron-right"></i>`;
 
                 menuItemContainer.appendChild(dropdownBtn);
                 wrapperDiv.appendChild(dropdownDiv);
@@ -198,7 +199,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 dropdownBtn.addEventListener('click', function () {
                     const isVisible = dropdownDiv.classList.toggle('show');
                     dropdownBtn.setAttribute('aria-expanded', isVisible);
+                    const icon = dropdownBtn.querySelector('i');
+                    if (isVisible) {
+                        icon.classList.remove('fa-chevron-right');
+                        icon.classList.add('fa-chevron-down');
+                    } else {
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-right');
+                    }
                 });
+
 
                 const clonedMenuItem = menuItem.cloneNode(true);
                 const mobileDropdownDiv = clonedMenuItem.querySelector('.item-container');
@@ -292,6 +302,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     const dropdownDiv = parentItem.querySelector('.item-container');
                     if (dropdownDiv) {
                         dropdownDiv.classList.add('show');
+                        const dropdownBtn = parentItem.querySelector('.dropdownBtn');
+                        if (dropdownBtn) {
+                            const icon = dropdownBtn.querySelector('i');
+                            icon.classList.remove('fa-chevron-right');
+                            icon.classList.add('fa-chevron-down');
+                        }
                     }
                 }
             }
@@ -329,4 +345,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.onload = moveThemeToggle;
     window.onresize = moveThemeToggle;
+
+    var toggler = document.getElementsByClassName("caret");
+    for (var i = 0; i < toggler.length; i++) {
+        toggler[i].addEventListener("click", function() {
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.querySelector("i").classList.toggle("fa-chevron-right");
+            this.querySelector("i").classList.toggle("fa-chevron-down");
+        });
+    }
 });

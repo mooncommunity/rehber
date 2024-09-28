@@ -86,6 +86,13 @@ nav {
     overflow-y: auto;
 }
 
+#left-sidebar::after,
+#right-sidebar::after {
+    content: "";
+    display: block;
+    height: 50px;
+}
+
 #mobileBookmarks .nav-link,
 #right-sidebar .nav-link,
 #left-sidebar .nav-link {
@@ -98,6 +105,29 @@ nav {
 #left-sidebar .nav-link.active {
     color: var(--link-active-color);
     font-weight: bold;
+}
+
+#right-sidebar .nav-link,
+.dropdown-item-container .nav-link {
+    border-left: 4px solid var(--scrollbar-thumb);
+    padding-left: 10px;
+}
+
+#right-sidebar .nav-link.active,
+.dropdown-item-container .nav-link.active {
+    border-left-color: var(--link-active-color);
+}
+
+#darkrplegal-d .nav-link {
+    border-left-color: blue;
+}
+
+#darkrpesnaf-d .nav-link {
+    border-left-color: green;
+}
+
+#darkrpillegal-d .nav-link {
+    border-left-color: red;
 }
 
 #theme-toggle svg {
@@ -119,20 +149,12 @@ nav {
     cursor: pointer;
     padding: 0;
     color: var(--link-color);
-    font-size: 12pt;
+    font-size: 10pt;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
-
-.left-menu .dropdown-toggle-btn::after {
-    content: "\25BC";
-    font-size: 12pt;
-    margin-left: 10px;
-    transition: transform 0.3s;
-}
-
 .left-menu .dropdown-toggle-btn.collapsed::after {
     transform: rotate(180deg);
 }
@@ -253,6 +275,49 @@ nav {
     display: none;
 }
 
+#career-tree {
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 20px;
+}
+#career-tree ul {
+    list-style-type: none;
+}
+
+#career-tree .tree ul {
+
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+#career-tree .tree li {
+    margin: 0 0 10px 0;
+    position: relative;
+}
+
+#career-tree .caret {
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+}
+
+#career-tree .caret i {
+    margin-right: 6px;
+    transition: transform 0.3s ease;
+}
+.tree li {
+    margin: 0 0 10px 0;
+    position: relative;
+}
+
+#career-tree .nested {
+    display: none;
+}
+
+#career-tree .active {
+    display: block;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -285,7 +350,6 @@ nav {
     #mainmenu {
         margin: 0;
     }
-
     .category-item {
         padding: 7px 12px;
         text-align: inherit;
