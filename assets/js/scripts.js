@@ -3,9 +3,9 @@ const currentUrl = URL + window.location.pathname;
 
 document.addEventListener('DOMContentLoaded', function () {
     const menuItems = [
-        {id: 'homehome', text: 'Anasayfa', href: `${URL}/index.html`, icon: 'fas fa-home'},
+        {id: 'homehome', text: 'Anasayfa', href: `${URL}/index`, icon: 'fas fa-home'},
         {type: 'category', text: 'DarkRP', icon: 'fa-solid fa-gun'},
-        {id: 'darkrpnedir', text: 'DarkRP Nedir?', href: `${URL}/darkrp.html`, icon: 'fa-solid fa-gun'},
+        {id: 'darkrpnedir', text: 'DarkRP Nedir?', href: `${URL}/darkrp`, icon: 'fa-solid fa-gun'},
         {
             id: 'darkrpkurallar',
             text: 'Oyun Kuralları',
@@ -16,49 +16,49 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             id: 'darkrpwelcome',
             text: 'DarkRP Başlarken',
-            href: `${URL}/darkrp-baslarken.html`,
+            href: `${URL}/darkrp-baslarken`,
             icon: 'fa-regular fa-hand',
             dropdown: [
                 {
                     id: 'darkrpchromium',
                     text: 'Chromium Nedir? Nasıl Chromium Geçerim?',
-                    href: `${URL}/darkrp-baslarken/chromium.html`,
+                    href: `${URL}/darkrp-baslarken/chromium`,
                     icon: 'fa-brands fa-chrome'
                 },
                 {
                     id: 'darkrpiletisim',
                     text: 'Sohbet ve İletişim',
-                    href: `${URL}/darkrp-baslarken.html#chat`,
+                    href: `${URL}/darkrp-baslarken#chat`,
                     icon: 'fas fa-comments'
                 },
                 {
                     id: 'darkrpphonee',
                     text: 'Telefon Kullanımı',
-                    href: `${URL}/darkrp-baslarken.html#phone`,
+                    href: `${URL}/darkrp-baslarken#phone`,
                     icon: 'fas fa-phone'
                 },
                 {
                     id: 'darkrpfamily',
                     text: 'Aile Paylaşımı ile sunucuya nasıl katılırım?',
-                    href: `${URL}/darkrp-baslarken/sss.html#ailepaylasimi`,
+                    href: `${URL}/darkrp-baslarken/sss#ailepaylasimi`,
                     icon: 'fas fa-users'
                 },
                 {
                     id: 'darkrpgeforce',
                     text: 'GeForce Now ile sunucuya nasıl katılırım?',
-                    href: `${URL}/darkrp-baslarken/sss.html#geforcenow`,
+                    href: `${URL}/darkrp-baslarken/sss#geforcenow`,
                     icon: 'fas fa-cloud'
                 },
                 {
                     id: 'darkrplinux',
                     text: 'Linux distrosu kullanıyorum nasıl sunucuya katılabilirim?',
-                    href: `${URL}/darkrp-baslarken/linux.html`,
+                    href: `${URL}/darkrp-baslarken/linux`,
                     icon: 'fa-brands fa-linux'
                 },
                 {
                     id: 'darkrpsss',
                     text: 'Sıkça Sorulan Sorular',
-                    href: `${URL}/darkrp-baslarken/sss.html`,
+                    href: `${URL}/darkrp-baslarken/sss`,
                     icon: 'fas fa-question'
                 }
             ]
@@ -66,41 +66,72 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             id: 'darkrpjob',
             text: 'DarkRP Kariyer',
-            href: `${URL}/darkrp-kariyer.html`,
+            href: `${URL}/darkrp-kariyer`,
             icon: 'fa-solid fa-user-graduate',
             dropdown: [
                 {
                     id: 'darkrplegal',
                     text: 'Devlet Çalışanı',
-                    href: `${URL}/darkrp-kariyer/legal.html`,
+                    href: `${URL}/darkrp-kariyer/legal`,
                     icon: 'fa-solid fa-walkie-talkie'
                 },
                 {
                     id: 'darkrpesnaf',
                     text: 'Esnaf ve Siviller',
-                    href: `${URL}/darkrp-kariyer/esnaf.html`,
+                    href: `${URL}/darkrp-kariyer/esnaf`,
                     icon: 'fa-solid fa-scale-balanced'
                 },
                 {
                     id: 'darkrpillegal',
                     text: 'Yasadışı Organizasyonlar',
-                    href: `${URL}/darkrp-kariyer/illegal.html`,
+                    href: `${URL}/darkrp-kariyer/illegal`,
                     icon: 'fa-solid fa-user-tie'
                 },
             ]
         },
 
-        // {type: 'category', text: 'Trouble in Terrorist Town', icon: 'fa-solid fa-user-secret'},
-        // {id: 'tttnedir', text: 'TTT Nedir?', href: `${URL}/ttt.html`, icon: 'fa-solid fa-user-secret'},
-        // {id: 'tttkurallar', text: 'Oyun Kuralları', href: `https://moonrp.com/tttkurallar`, icon: 'fa-solid fa-book-skull', target: '_blank'},
-        // {id: 'tttbaslarken', text: 'TTT Başlarken', href: `${URL}/ttt-baslarken.html`, icon: 'fa-solid fa-graduation-cap'},
+        {type: 'category', text: 'Trouble in Terrorist Town', icon: 'fa-solid fa-user-secret'},
+        {id: 'tttnedir', text: 'TTT Nedir?', href: `${URL}/ttt`, icon: 'fa-solid fa-user-secret'},
+        {id: 'tttkurallar', text: 'Oyun Kuralları', href: `https://moonrp.com/tttkurallar`, icon: 'fa-solid fa-book-skull', target: '_blank'},
 
+        {
+            id: 'tttwelcome',
+            text: 'TTT Başlarken',
+            href: `${URL}/ttt-baslarken`,
+            icon: 'fa-solid fa-graduation-cap',
+            dropdown: [
+                {
+                    id: 'tttchromium',
+                    text: 'Chromium Nedir? Nasıl Chromium Geçerim?',
+                    href: `${URL}/ttt-baslarken/chromium`,
+                    icon: 'fa-brands fa-chrome'
+                },
+                {
+                    id: 'tttlinux',
+                    text: 'Linux distrosu kullanıyorum nasıl sunucuya katılabilirim?',
+                    href: `${URL}/ttt-baslarken/linux`,
+                    icon: 'fa-brands fa-linux'
+                },
+                {
+                    id: 'tttsss',
+                    text: 'Sıkça Sorulan Sorular',
+                    href: `${URL}/ttt-baslarken/sss`,
+                    icon: 'fas fa-question'
+                }
+            ]
+        },
         {type: 'category', text: 'Konu Dışı', icon: 'fa-solid fa-person-circle-question'},
         {
             id: 'discordid',
             text: 'Discord ID nasıl öğrenebilirim?',
-            href: `${URL}/discordid.html`,
+            href: `${URL}/discordid`,
             icon: 'fa-brands fa-discord'
+        },
+        {
+            id: 'gmodcontent',
+            text: 'CS:S Content Nasıl İndiririm?',
+            href: `${URL}/content`,
+            icon: 'fa-solid fa-cubes'
         },
         {type: 'category', text: 'Faydalı Bağlantılar', icon: 'fa-solid fa-arrow-up-right-from-square'},
         {id: 'mg', text: 'MoonGaming', href: 'https://moonrp.com', icon: 'fa-solid fa-moon', target: '_blank'},

@@ -383,6 +383,10 @@ nav {
         padding: 5px 10px;
         border-bottom: 0;
     }
+    
+    .mobile-content {
+        display: block;
+    }
 }
 
 @media (min-width: 768px) {
@@ -399,6 +403,9 @@ nav {
     }
 
     .navbar-nav {
+        display: none;
+    }
+    .mobile-content {
         display: none;
     }
 }

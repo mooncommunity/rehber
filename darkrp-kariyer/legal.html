@@ -8,7 +8,7 @@
 
     <meta name="description"
           content="kamu düzenini sağlamak ve vatandaşlara hizmet etmek için sorumluluk taşır; güvenlik, vergi toplama ve yasaların uygulanmasında aktif rol oynar.">
-    <meta name="keywords" content="MoonGaming, DarkRP, TTT, Murder, rehber, oyun, strateji, MoonRP">
+    <meta name="keywords" content="MoonGaming, DarkRP, TTT, Murder, rehber, oyun, strateji, MoonRP, legal">
 
     <meta property="og:title" content="Devlet Çalışanı - MoonGaming Rehber">
     <meta property="og:description"
@@ -96,7 +96,7 @@
                 <hr>
                 <br>
                 <div>
-                    <h3 id="ilerleme">Meslekte Gelişim</h3>
+                    <h3 class="text-info" id="ilerleme">Meslekte Gelişim</h3>
                     <div id="career-tree" class="mb-4">
                         <ul class="tree">
                             <li>
@@ -134,9 +134,10 @@
                                                                         <ul class="nested">
                                                                             <li>
                                                                                 <span class="caret"><i
-                                                                                        class="fas fa-chevron-right"></i>Jöh Komando</span>
+                                                                                        class="fas fa-chevron-right"></i>Jandarma Özel Harekat Komando</span>
                                                                                 <ul class="nested">
-                                                                                    <li>Jöh Komutanı</li>
+                                                                                    <li>Jandarma Özel Harekat Komutanı
+                                                                                    </li>
                                                                                 </ul>
                                                                             </li>
                                                                         </ul>
@@ -147,12 +148,12 @@
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <span class="caret"><i class="fas fa-chevron-right"></i>Pöh Memur</span>
+                                                        <span class="caret"><i class="fas fa-chevron-right"></i>Polis Özel Harekat Memur</span>
                                                         <ul class="nested">
                                                             <li>
-                                                                <span class="caret"><i class="fas fa-chevron-right"></i>Pöh Bulldozer</span>
+                                                                <span class="caret"><i class="fas fa-chevron-right"></i>Polis Özel Harekat Bulldozer</span>
                                                                 <ul class="nested">
-                                                                    <li>Pöh Amiri</li>
+                                                                    <li>Polis Özel Harekat Amiri</li>
                                                                 </ul>
                                                             </li>
                                                         </ul>
@@ -192,9 +193,9 @@
                                                 <span class="caret"><i class="fas fa-chevron-right"></i>Doktor</span>
                                                 <ul class="nested">
                                                     <li>
-                                                        <span class="caret"><i class="fas fa-chevron-right"></i>Pöh Doktor</span>
+                                                        <span class="caret"><i class="fas fa-chevron-right"></i>Polis Özel Harekat Doktor</span>
                                                         <ul class="nested">
-                                                            <li>Jöh Doktor</li>
+                                                            <li>Jandarma Özel Harekat Doktor</li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -206,10 +207,11 @@
                         </ul>
                     </div>
                 </div>
-                <div>
 
-                    <hr>
-                    <br>
+                <hr>
+                <br>
+
+                <div>
                     <h3 id="bekci">Bekçi İken Ne Yapmalıyım?</h3>
                     <p>Bekçi mesleği, Emniyet Teşkilatı'nın temel taşıdır. Herkesin bir gün yaşayabileceği bu mesleğin
                         temel görevleri şu şekildedir:</p>
@@ -225,16 +227,34 @@
                         </li>
                     </ol>
                 </div>
+
+                <hr>
+                <br>
+
                 <div>
-                    <hr>
-                    <br>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h3 id="belediyeisci">Belediye İşçisiyim, Nasıl Görevimi Yerine Getirebilirim?</h3>
+                            <p>5 dakikada bir ekranınıza tamir ikonu gelmektedir. Polis karakolundan araç çıkararak
+                                tamir ikonunun olduğu yere gidip görevinizi yerine getirmeye başlayabilirsiniz.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="../assets/image/darkrp_belediyeisci.png" class="img-fluid" alt="Belediye İşçisi">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <br>
+
+                <div>
                     <h3 id="dolap">Polis Sağlık Dolabı ve Teçhizat Dolabı Nedir?</h3><br>
                     <p>
                         Polis Sağlık Dolabı, Polislerin ihtiyaçlarını karşılama konusundaki en etkili etkenlerden
                         biridir.
                         Polis Sağlık Dolabıyla etkileşime geçildiği zaman Sizi bulunduğunuz polis mesleğine göre can,
                         zırh
-                        (PÖH/JÖH/MIT'seniz eğer ek olarak Ayakkabı, Kulaklık, Çelik yelek, Kask) verir.
+                        (Polis Özel Harekat/Jandarma Özel Harekat/MIT'seniz eğer ek olarak Ayakkabı, Kulaklık, Çelik
+                        yelek, Kask) verir.
                     </p>
                     <ul>
                         <li>Polis Sağlık Dolabını kullandığınız zaman 2 dakikalık cooldown'ı vardır.</li>
@@ -248,8 +268,10 @@
                         </li>
                     </ul>
                 </div>
+
                 <hr>
                 <br>
+
                 <div>
                     <h3 id="taser">Taser Hangi Durumlarda Kullanılmalıdır ve Kullanılmamalıdır?</h3>
                     <p>Taser, bir polis memurunun şüphelileri ölümcül olmayan bir şekilde etkisiz hale getirmesine
@@ -269,9 +291,49 @@
                     </ul>
                     <p>Taser kullanımında dikkatli olunmalı ve sadece gerektiğinde başvurulmalıdır.</p>
                 </div>
+
+                <hr>
+                <br>
                 <div>
-                    <hr>
-                    <br>
+                    <h3 id="gbt" class="my-4">GBT Tablet Nedir, Nasıl Kullanılır?</h3>
+                    <p>GBT Tablet, emniyet birimlerinin işini kolaylaştıran teknolojik bir cihazdır. 5 kategoriye
+                        ayrılmaktadır.</p>
+
+
+                    <div class="list-group mb-4">
+                        <div class="list-group-item">
+                            <h5>1. GBT Menüsü</h5>
+                            <p>Bu menüde oyuncular ve bilgileri yer almaktadır: arama izni, baskın izni, ceza puanı,
+                                kişinin geçmişi, sahip olduğu araçlar ve ehliyet bilgileri burada bulunur.</p>
+                        </div>
+                        <div class="list-group-item">
+                            <h5>2. Arananlar</h5>
+                            <p>MoonCity'de arama kararı çıkanlar bu menüde gözükür.</p>
+                        </div>
+                        <div class="list-group-item">
+                            <h5>3. Panik Butonu</h5>
+                            <p>Acil desteğe mi ihtiyacınız var? Konumunuzu GPS aracılığıyla emniyet birimlerine
+                                bildirin.</p>
+                        </div>
+                        <div class="list-group-item">
+                            <h5>4. Suçlu Transfer İsteği</h5>
+                            <p>Suçlunun başka birimlere mi teslim edilmesi gerekiyor? O zaman bu menü tam size göre.</p>
+                        </div>
+                        <div class="list-group-item">
+                            <h5>5. Raporlar</h5>
+                            <p>Burada baskın sonucu gelişen olayların raporu tutulmaktadır. Birçok oyuncu ne yazık ki
+                                burayı kullanmamaktadır.</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <img src="../assets/image/darkrp_gbt.png" class="img-fluid" alt="GBT Tablet Görseli">
+                    </div>
+                </div>
+
+                <hr>
+                <br>
+                <div>
                     <h3 id="suclu">Bir Suçlu yakaladım nasıl role devam etmeliyim?</h3><br>
                     <p>
                         Bir süpheliyi yakaladıktan sonra direkt cezaevine göndermemelisiniz, unutmayın kimse kanıtlanana
@@ -289,14 +351,20 @@
                         atarınız.
                     </p>
                 </div>
+
                 <hr>
                 <br>
+
                 <div>
                     <h3 id="asayis-sivil">Sivil Polis, Asayiş Memurundan Üstün Müdür?</h3><br>
-                    <p>Hayır, her iki ekip de Emniyet Genel Müdürlüğü’ne bağlıdır. Sivil polis amiri aynı zamanda asayiş polis amiridir. Sivil polis ile asayiş memurunu ayıran tek şey görevleridir. İki taraf da birbirine saygılı ve düzgün bir şekilde konuşmalı, birlikte çalışmalıdır.</p>
+                    <p>Hayır, her iki ekip de Emniyet Genel Müdürlüğü’ne bağlıdır. Sivil polis amiri aynı zamanda asayiş
+                        polis amiridir. Sivil polis ile asayiş memurunu ayıran tek şey görevleridir. İki taraf da
+                        birbirine saygılı ve düzgün bir şekilde konuşmalı, birlikte çalışmalıdır.</p>
                 </div>
+
                 <hr>
                 <br>
+
                 <div>
                     <h3 id="sivil-polis-mit">Sivil Polis ve MIT'in görevi nedir?</h3><br>
                     <p>
@@ -313,15 +381,19 @@
                         <li>Sivil Polis ve MIT Personelleri sızma işlemleri haricinde illegal eylemlerde bulunmamalıdır.
                             (örnek: Sırtında silahla gezmek, polislere hakaret edip kaçmak)
                         </li>
-                        <li>Sivil Polis veya MIT Personelleri PÖH veya JÖH bulunuyorken operasyon yürütemezler yani
-                            PÖH'leri veya JÖH'leri baskına alamama gibi bir durumu yoktur.
+                        <li>Sivil Polis veya MIT Personelleri Polis Özel Harekat veya Jandarma Özel Harekat bulunuyorken
+                            operasyon yürütemezler yani
+                            Polis Özel Harekat'leri veya Jandarma Özel Harekat'leri baskına alamama gibi bir durumu
+                            yoktur.
                             Sızılması gereken yerlere girip istihbarat alıp raporlarını bölgenin ilgili birimine
                             iletmeleri gerekir.
                         </li>
                     </ul>
                 </div>
+
                 <hr>
                 <br>
+
                 <div>
                     <h3 id="baskansokagacikma">Başkan Olarak Sokağa Çıkma Yasağı Başlatmadan Ne Yapmalıyım?</h3>
                     <p>Belediye başkanı olarak sokağa çıkma yasağı uygulayacaksanız, bu kararı kendiniz vermemelisiniz.
