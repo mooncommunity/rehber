@@ -26,6 +26,10 @@
     --header5: #FBBF24;
 }
 
+[data-bs-theme="dark"] html, body{
+    background-color: #1a1b1f;
+}
+
 [data-bs-theme="light"] {
     --link-color: #24292e;
     --link-active-color: #0366d6;
