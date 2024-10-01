@@ -357,26 +357,6 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('hashchange', updateActiveClass);
     updateActiveClass();
 
-    function moveThemeToggle() {
-        const themeToggle = document.getElementById('theme-toggle');
-        const topMenu = document.getElementById('top-menu');
-        const containerFluid = document.querySelector('.container-fluid');
-
-        if (window.innerWidth < 992) {
-            if (themeToggle.parentElement !== topMenu) {
-                topMenu.appendChild(themeToggle);
-            }
-        }
-        else {
-            if (themeToggle.parentElement !== containerFluid) {
-                containerFluid.appendChild(themeToggle);
-            }
-        }
-    }
-
-    window.onload = moveThemeToggle;
-    window.onresize = moveThemeToggle;
-
     var toggler = document.getElementsByClassName("caret");
     for (var i = 0; i < toggler.length; i++) {
         toggler[i].addEventListener("click", function() {
