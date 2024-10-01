@@ -1,9 +1,10 @@
-const URL = window.location.protocol + "//" + window.location.hostname;
+//const URL = window.location.protocol + "//" + window.location.hostname;
+const URL = "https://moonrp.com/wiki";
 const currentUrl = URL + window.location.pathname;
 
 document.addEventListener('DOMContentLoaded', function () {
     const menuItems = [
-        {id: 'homehome', text: 'Anasayfa', href: `${URL}/index`, icon: 'fas fa-home'},
+        {id: 'homehome', text: 'Anasayfa', href: `${URL}`, icon: 'fas fa-home'},
         {type: 'category', text: 'DarkRP', icon: 'fa-solid fa-gun'},
         {id: 'darkrpnedir', text: 'DarkRP Nedir?', href: `${URL}/darkrp`, icon: 'fa-solid fa-gun'},
         {
