@@ -26,6 +26,19 @@
     --header5: #FBBF24;
 }
 
+[data-bs-theme="dark"] body {
+    background: #1a1b1f;
+    color: rgba(255,255,255,.75);
+    overflow-x: hidden
+}
+
+[data-bs-theme="dark"] .table {
+    --bs-table-bg: #1a1b1f;
+    background-color: #1a1b1f;
+
+}
+
+
 [data-bs-theme="light"] {
     --link-color: #24292e;
     --link-active-color: #0366d6;
@@ -273,6 +286,11 @@ nav {
 
 .nullcontent {
     display: none;
+}
+
+main .img-fluid img {
+    max-width: 100%;
+    height: auto;
 }
 
 #career-tree {

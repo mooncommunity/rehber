@@ -43,43 +43,6 @@
 
             </ul>
         </div>
-        <div id="theme-toggle" class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="bd-theme" role="button" aria-expanded="false"
-               data-bs-toggle="dropdown">
-                <svg class="bi my-1 theme-icon-active">
-                    <use href="#circle-half"></use>
-                </svg>
-                <span class="d-lg-none ms-2" id="bd-theme-text"></span>
-                Tema
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-                <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
-                        <svg class="bi me-2 opacity-50">
-                            <use href="#sun-fill"></use>
-                        </svg>
-                        Aydınlık
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
-                        <svg class="bi me-2 opacity-50">
-                            <use href="#moon-stars-fill"></use>
-                        </svg>
-                        Karanlık
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center active"
-                            data-bs-theme-value="auto">
-                        <svg class="bi me-2 opacity-50">
-                            <use href="#circle-half"></use>
-                        </svg>
-                        Sistem
-                    </button>
-                </li>
-            </ul>
-        </div>
     </div>
 </nav>
 <div class="container-fluid">
@@ -105,7 +68,8 @@
                     </div>
 
                     <ul>
-                        <li><b>Workshop Eklentileri</b>: <a href="steam://connect/91.151.94.211:28015?appid=4000" target="_blank">TTT
+                        <li><b>Workshop Eklentileri</b>: <a href="steam://connect/91.151.94.211:28015?appid=4000"
+                                                            target="_blank">TTT
                             sunucumuza</a> katılmadan önce, <a
                                 href="https://steamcommunity.com/workshop/filedetails/?id=369504622" target="_blank">workshop</a>
                             indirin. Eğer oyunda iseniz indirme işlemi sonrası Garry's mod komple kapatıp açınız.
@@ -144,17 +108,37 @@
                     </ul>
                 </div>
 
-            </div>
+                <hr>
+                <br>
 
-        </main>
+                <div>
+                    <h3 id="dil">Oyun ingilizce türkçe yapamıyor muyum?</h3>
+                    <p>Maalesef, dil seçemiyorsunuz oyunun içerik arayüzü ingilizcedir.</p>
+                </div>
+                <div>
+                    <h3 id="izleyici">Sanırım izleyici modundayım, nasıl oyuna dönebilirim?</h3>
+                    <p>Eğer ölmediyseniz ve ekranda uçarak geziyorsanız, büyük ihtimalle izleme modundasınız. Bunu düzeltmek için "F1" tuşuna basarak "Settings" kısmına geliniz. Ardından "Spectate-only mode (always stay spectator)" seçeneğinin işaretini kaldırınız. Bu sayede bir sonraki raunda otomatik olarak katılacaksınız.</p>
+                    <div class="text-center">
+                        <img src="./assets/image/ttt_spectate.png" alt="TTT izleyici modu ayarları" class="img-fluid">
+                    </div>
+                </div>
 
-
-        <nav id="right-sidebar" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
-            <div class="position-sticky">
-                <ul class="nav flex-column" id="right-menu"></ul>
-            </div>
-        </nav>
+                <hr>
+            <br>
     </div>
+
+    <hr>
+    <br>
+
+    </main>
+
+
+    <nav id="right-sidebar" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+        <div class="position-sticky">
+            <ul class="nav flex-column" id="right-menu"></ul>
+        </div>
+    </nav>
+</div>
 </div>
 
 <div id="mobileBookmarks">
@@ -194,8 +178,8 @@
 <script src="assets/js/scripts.js"></script>
 <script src="assets/js/colorSchema.js"></script>
 <script>
-    document.getElementById("chromeBox").href = URL + "/ttt-baslarken/chromium.html";
-    document.getElementById("sssBox").href = URL + "/ttt-baslarken/sss.html";
+    document.getElementById("chromeBox").href = URL + "/ttt-baslarken/chromium";
+    document.getElementById("sssBox").href = URL + "/ttt-baslarken/sss";
 </script>
 </body>
 </html>
