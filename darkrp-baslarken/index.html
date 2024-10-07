@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr" data-bs-theme="dark">
 <head>
@@ -32,7 +31,21 @@
     #cardContainer .card {
         margin-top: 1.5%;
         margin-bottom: 1.5%;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        cursor: pointer;
     }
+
+    #cardContainer .card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border: 4px solid var(--bs-success-text-emphasis);
+    }
+
+    #cardContainer .card:hover img {
+        filter: brightness(0.8);
+    }
+
+
 </style>
 <nav id="mainmenu" class="navbar navbar-expand-lg">
     <div class="container-fluid">
@@ -109,7 +122,9 @@
                             kiralayabilirsiniz
                             (Kapıya bakıp yapmalısınız), evinize arkadaşlarınızı ekleyebilirsiniz.
                         </li>
-                        <li><strong>F3:</strong> Araç içinde iseniz plaka değişimi yapmanızı sağlar.</li>
+                        <li><strong>F3:</strong> Araç içinde iseniz plaka değişimi yapmanızı sağlar. Ek olarak araçta
+                            değilseniz fare imlecinizi belirtir.
+                        </li>
                         <li><strong>F4:</strong> Meslek, sevkiyat ve varlıklar menüsüne erişebilirsiniz.</li>
                         <li><strong>TAB:</strong> Oyuncu listesi ve durumlarına bakabilirsiniz.</li>
                         <li><strong>M:</strong> Oyunun haritasının küçültülmüş halini gösterir. (Yokuş altına
@@ -149,25 +164,32 @@
                         <div class="tab-pane fade show active" id="general" role="tabpanel">
                             <br>
                             <ul>
-                                <li><strong>// veya /ooc:</strong> Oyun dışında genel konuşmalar yapmak için kullanılır.<br><em>Örnek:</em><br><code>//
-                                    Etraf error gözüküyor nasıl çözebilirim?</code></li>
+                                <li><strong>// veya /ooc &lt;Mesaj&gt;:</strong> Oyun dışında genel konuşmalar yapmak
+                                    için kullanılır.<br><em>Örnek:</em><br><code>//
+                                        Etraf error gözüküyor nasıl çözebilirim?</code></li>
                                 <hr>
-                                <li><strong>/looc:</strong> Lokal OOC sohbeti yapmanızı
+                                <li><strong>/looc &lt;Mesaj&gt;:</strong> Lokal OOC sohbeti yapmanızı
                                     sağlar.<br><em>Örnek:</em><br><code>/looc
-                                        Bu base çok kötü!</code></li>
+                                        Arkadaşlar rol ortasında hatalı emote atmayın lütfen</code></li>
                                 <hr>
-                                <li><strong>/reklam veya /advert:</strong> IC (In-Character) reklamlar ve duyurular
+                                <li><strong>/reklam veya /advert &lt;Mesaj&gt;:</strong> IC (In-Character) reklamlar ve
+                                    duyurular
                                     yapmanızı sağlar.<br><em>Örnek:</em><br><code>/reklam Şehirde yeni açılan Moon AVM
                                         bekleriz!</code></li>
                                 <hr>
-                                <li><strong>/pm &lt;İsim&gt;:</strong> Belirli bir kullanıcıya özel mesaj atmanızı
-                                    sağlar.<br><em>Örnek:</em><br><code>/pm Ozgur Sunucu hakkında bir şey sorabilir
+                                <li><strong>!asay &lt;Mesaj&gt;:</strong> Yetkili sohbete mesaj yazar<br><em>Örnek:</em><br><code>!asay
+                                    Duvar sokağında MassRDM yapan biri var izliyebilir misiniz?</code>
+                                </li>
+                                <hr>
+                                <li><strong>/pm &lt;Kişi&gt;:</strong> Belirli bir kullanıcıya özel mesaj atmanızı
+                                    sağlar.<br><em>Örnek:</em><br><code>/pm Ozgur MoonGiller Sunucu hakkında bir şey
+                                        sorabilir
                                         miyim?</code></li>
                                 <hr>
                                 <li><strong>/me:</strong> Karakterinizin yaptığı eylemleri anlatmak için kullanılır.<br><em>Örnek:</em><br><code>/me
                                     masaya oturur</code></li>
                                 <hr>
-                                <li><strong>/dropmoney &lt;miktar&gt;:</strong> Yere belirtiğiniz miktarda para
+                                <li><strong>/dropmoney &lt;Miktar&gt;:</strong> Yere belirtiğiniz miktarda para
                                     atar.<br><em>Örnek:</em><br><code>/dropmoney 1000</code></li>
                                 <hr>
                                 <li><strong>/drop:</strong> Elinizde atılabilir silah var ise yere atmanızı
@@ -177,16 +199,21 @@
                                 <li><strong>/calladmin &lt;Sebep&gt;:</strong> Yetkili çağırmak için kullanılır.<br><em>Örnek:</em><br><code>/calladmin
                                     Duvar arasına sıkıştım çekebilir misin?</code></li>
                                 <hr>
-                                <li><strong>!parti:</strong> Parti menüsünü
-                                    açar.<br><em>Örnek:</em><br><code>!parti</code>
-                                </li>
-                                <hr>
-                                <li><strong>/write:</strong> Döküman yazmak için
+                                <li><strong>/write &lt;Yazı&gt;:</strong> Döküman yazmak için
                                     kullanılır.<br><em>Örnek:</em><br><code>/write
                                         Michael MoonGiller aklı dengesi yerinde değildir.</code></li>
                                 <hr>
                                 <li><strong>/check &lt;Kişi&gt; &lt;Miktar&gt;:</strong> Çek yazmak için kullanılır.<br><em>Örnek:</em><br><code>/check
                                     'Kardelen MoonGiller' 1000</code></li>
+                                <hr>
+                                <li><strong>!menu:</strong> Genel menüyü
+                                    açar.<br><em>Örnek:</em><br><code>!menu</code>
+                                </li>
+                                <hr>
+                                <li><strong>!parti:</strong> Parti menüsünü
+                                    açar.<br><em>Örnek:</em><br><code>!parti</code>
+                                </li>
+                                <br>
                             </ul>
                         </div>
 
@@ -203,7 +230,7 @@
                                         önüne
                                         takviye unsur talebimiz mevcut efendim</code></li>
                                 <hr>
-                                <li><strong>/broadcast &lt;mesaj&gt;:</strong> Belediye Başkanı iken duyuru
+                                <li><strong>/broadcast &lt;Mesaj&gt;:</strong> Belediye Başkanı iken duyuru
                                     gönderir.<br><em>Örnek:</em><br><code>/broadcast Artan suç nedeniyle sokağa çıkma
                                         yasağı
                                         başlatılacaktır.</code></li>
@@ -218,6 +245,10 @@
                                 <li><strong>/lottery:</strong> Belediye Başkanı iken piyango başlatmak için
                                     kullanılır.<br><em>Örnek:</em><br><code>/lottery</code></li>
                                 <hr>
+                                <div class="alert alert-info" role="alert">
+                                    Warrant ve Wanted işlemleri için GBT Tablet kullanmanız önerilir.
+                                </div>
+                                <br>
                                 <li><strong>/warrant:</strong> Aranma izni çıkarmak için
                                     kullanılır.<br><em>Örnek:</em><br><code>/warrant 'Micheal MoonGiller' 'Yasadışı
                                         Madde
@@ -247,13 +278,12 @@
                         <div class="tab-pane fade" id="illegal" role="tabpanel">
                             <br>
                             <ul>
-                                <li><strong>/channel
-                                    <Numara>:
+                                <li><strong>/channel &lt;Numara&gt;:
                                 </strong> Kanalınızı belirtiğiniz numara ile değiştirir.<br><em>Örnek:</em><br><code>/channel
                                     5</code></li>
                                 <hr>
                                 <li><strong>/radio
-                                    <Mesaj>:
+                                    &lt;Mesaj&gt;:
                                 </strong> Bulunduğunuz kanala mesaj gönderir.<br><em>Örnek:</em><br><code>/radio Burada
                                     hareketlilik var</code></li>
                                 <hr>
@@ -267,7 +297,7 @@
                                 <li><strong>!asay isyan:</strong> Sokağa çıkma yasağında isyan etmek için
                                     kullanılır.<br><em>Örnek:</em><br><code>!asay isyan</code></li>
                                 <hr>
-                                <li><strong>!asay +1:</strong> Toplu illegal eylemlerde eylem gerçekleştirdiğinizi
+                                <li><strong>!asay +1:</strong> Toplu eylemlerde eylem gerçekleştirdiğinizi
                                     belirtmek
                                     için kullanılır.<br><em>Örnek:</em><br><code>!asay +1</code></li>
                                 <hr>
@@ -300,11 +330,9 @@
                         erişmek
                         için '1', '2' gibi numaralara basıp kullanabilirsiniz veya mouse'unuzun orta tekerleği ile
                         erişebilirsiniz.</p>
-
-                    <figure class="text-center">
+                    <div class="col-12 mx-auto text-center">
                         <img src="../assets/image/darkrp_silahbar.png" alt="Silahlar" class="img-fluid">
-                        <figcaption><small>Silahlarınızın bulunduğu slotlar</small></figcaption>
-                    </figure>
+                    </div>
                 </div>
 
                 <hr>
@@ -323,11 +351,10 @@
                         çerçevesini geçince karakteriniz tekrar hareket etmeye başlayacaktır.
                     </div>
 
-                    <figure class="text-center">
-                        <img src="../assets/image/darkrp_telefon.png" alt="Telefon" class="img-fluid mx-auto d-block">
-                        <figcaption><small>Telefon</small></figcaption>
-                    </figure>
-
+                    <div class="col-6 mx-auto text-center">
+                        <img src="../assets/image/darkrp_telefon.png" alt="Telefon" class="img-fluid">
+                    </div>
+                    <br>
                     <ul class="nav nav-tabs" id="telefonTabs" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="kamera-tab" data-bs-toggle="tab" href="#kamera"
@@ -358,11 +385,10 @@
                                 <li>Oyun içerisinde fotoğraf çekmenizi sağlar.</li>
                                 <li>Yönlendirme resmine basarak iç veya dış kameranızı ayarlayabilirsiniz.</li>
                             </ul>
-                            <figure class="text-center">
+                            <div class="mx-auto text-center">
                                 <img src="../assets/image/darkrp_telefon_kamera.png" alt="Telefon - Kamera"
-                                     class="img-fluid mx-auto d-block">
-                                <figcaption><small>Telefon - Kamera</small></figcaption>
-                            </figure>
+                                     class="img-fluid">
+                            </div>
                         </div>
 
                         <div class="tab-pane fade" id="galeri" role="tabpanel">
@@ -372,11 +398,10 @@
                                 <li>Yükleme ikonuna basarsanız fotoğrafınızı Twitter'a yükleyebilecek hale getirirsiniz.
                                 </li>
                             </ul>
-                            <figure class="text-center">
+                            <div class="mx-auto text-center">
                                 <img src="../assets/image/darkrp_telefon_galeri.png" alt="Telefon - Galeri"
-                                     class="img-fluid mx-auto d-block">
-                                <figcaption><small>Telefon - Galeri</small></figcaption>
-                            </figure>
+                                     class="img-fluid">
+                            </div>
                         </div>
 
                         <div class="tab-pane fade" id="twitter" role="tabpanel">
@@ -384,11 +409,10 @@
                             <p>Fotoğraf yükleme: İlk önce çektiğiniz fotoğrafı buluta yüklemelisiniz. Ardından Twitter
                                 sayaç
                                 resmine tıklayıp fotoğrafınızı seçebilirsiniz.</p>
-                            <figure class="text-center">
+                            <div class="mx-auto text-center">
                                 <img src="../assets/image/darkrp_telefon_twitter.png" alt="Telefon - Twitter"
-                                     class="img-fluid mx-auto d-block">
-                                <figcaption><small>Telefon - Twitter</small></figcaption>
-                            </figure>
+                                     class="img-fluid">
+                            </div>
                         </div>
 
                         <div class="tab-pane fade" id="papara" role="tabpanel">
@@ -397,11 +421,10 @@
                                 <li>Banka hesabındaki parayı ATM gitmeden kolayca öğrenebilirsiniz.</li>
                                 <li>Banka hesabındaki parayı kolaylıkla başka oyuncuya gönderebilirsiniz.</li>
                             </ul>
-                            <figure class="text-center">
+                            <div class="mx-auto text-center">
                                 <img src="../assets/image/darkrp_telefon_papara.png" alt="Telefon - Papara"
-                                     class="img-fluid mx-auto d-block">
-                                <figcaption><small>Telefon - Papara</small></figcaption>
-                            </figure>
+                                     class="img-fluid">
+                            </div>
                         </div>
 
                         <div class="tab-pane fade" id="mesajlar" role="tabpanel">
@@ -414,11 +437,10 @@
                                 Oyuncuyu aramak için ilk önce mesajına gitmeniz gerekiyor, ardından yukarıda sağda arama
                                 simgesine tıklayın.
                             </div>
-                            <figure class="text-center">
+                            <div class="mx-auto text-center">
                                 <img src="../assets/image/darkrp_telefon_mesajlar.png" alt="Telefon - Mesajlar"
-                                     class="img-fluid mx-auto d-block">
-                                <figcaption><small>Telefon - Mesajlar</small></figcaption>
-                            </figure>
+                                     class="img-fluid">
+                            </div>
                         </div>
                     </div>
 
@@ -444,11 +466,11 @@
                                 <li>Kurlarda gerçekleşen olayları görüntülemek için kullanabilirsiniz.</li>
                                 <li>Örnek: BTC, AVAX, ETH, USDT, DOGE, SOL</li>
                             </ul>
-                            <figure class="text-center">
+                            <div class="mx-auto text-center">
                                 <img src="../assets/image/darkrp_telefon_borsa.png" alt="Telefon - Borsa"
-                                     class="img-fluid mx-auto d-block">
-                                <figcaption><small>Telefon - Borsa</small></figcaption>
-                            </figure>
+                                     class="img-fluid">
+
+                            </div>
                         </div>
 
                         <div class="tab-pane fade" id="hesapmakinesi" role="tabpanel">
@@ -456,11 +478,11 @@
                             <ul>
                                 <li>Toplama, Çıkarma, Çarpma, Bölme işlemi yapmak için kullanabilirsiniz.</li>
                             </ul>
-                            <figure class="text-center">
+                            <div class="mx-auto text-center">
                                 <img src="../assets/image/darkrp_telefon_hesapmak.png" alt="Telefon - Hesap Makinesi"
-                                     class="img-fluid mx-auto d-block">
-                                <figcaption><small>Telefon - Hesap Makinesi</small></figcaption>
-                            </figure>
+                                     class="img-fluid">
+
+                            </div>
                         </div>
 
                         <div class="tab-pane fade" id="ayarlar" role="tabpanel">
@@ -468,11 +490,11 @@
                             <ul>
                                 <li>Telefonun renk ayarlarını buradan değiştirebilirsiniz.</li>
                             </ul>
-                            <figure class="text-center">
+                            <div class="mx-auto text-center">
                                 <img src="../assets/image/darkrp_telefon_ayarlar.png" alt="Telefon - Ayarlar"
-                                     class="img-fluid mx-auto d-block">
-                                <figcaption><small>Telefon - Ayarlar</small></figcaption>
-                            </figure>
+                                     class="img-fluid">
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -484,8 +506,9 @@
                     <h3 id="city">Önemli yerler</h3>
                     <br>
                     <p>Şehirdeki herkesin bilmesi gereken yerlerden kareler</p>
-                    <div class="alert alert-success" role="alert">
-                        Resimlerin üzerine tıklarsanız kısa yazımızı görebilirsiniz.
+                    <div class="alert alert-success mobile-content" role="alert">
+                        <p>Resimlerin üzerine tıklarsanız kısa yazımızı görebilirsiniz.</p>
+                        <br>
                     </div>
                     <div class="row" id="cardContainer"></div>
                     <div class="modal fade" id="modalTemplate" tabindex="-1" aria-labelledby="modalLabel"
@@ -550,10 +573,16 @@
                                     </li>
                                 </ul>
                                 <hr>
-                                <ol>
-                                    <li>3 Slotunuzdaki Kredi Kartınızı elinize alınız.</li>
-                                    <li>Sol Click yapınız.</li>
+                                <ol style="list-style-type: none;">
+                                    <li style="display: flex;">
+                                        <span style="margin-right: 5px;">1)</span> 3 Slotunuzdaki Kredi Kartınızı
+                                        elinize alınız.
+                                    </li>
+                                    <li style="display: flex;">
+                                        <span style="margin-right: 5px;">2)</span> Sol Click yapınız.
+                                    </li>
                                 </ol>
+
                             </div>
                         </div>
                     </div>
@@ -591,56 +620,121 @@
 
                         <h5> Bazı Tool Gun özellikleri </h5>
                         <br>
-                        <div id="toolgunProperty">
-                            <details>
-                                <summary>Materyal</summary>
-                                <br>
-                                <p>Nesnenin materyalini değiştirmenizi sağlar. Örneğin ahşap geçirebilir, metal
-                                    yapabilirsiniz.</p>
-                            </details>
-                            <details>
-                                <summary>Renk</summary>
-                                <br>
-                                <p>Nesneyi boyamanızı sağlar. Örneğin kırmızıya boyayabilirsiniz.</p>
-                            </details>
-                            <details>
-                                <summary>Açı-Matik</summary>
-                                <br>
-                                <p>Nesnenin yönünü X,Y,Z koordinatları belirterek değiştirmenizi sağlar. Örneğin bir
-                                    nesne
-                                    düz farz edelim bunu çapraz bakıcak şekilde ayarlıyabiliriz.</p>
-                            </details>
-                            <details>
-                                <summary>Görünmez Kapı</summary>
-                                <br>
-                                <p>Görünmez kapıya bir aktifleştirme tuşu atayıp aynı zamanda Düğme ile keypad aynı
-                                    tuşları
-                                    atar isek bunlardan çıkacak doğru ya da yanlış cevaba göre görünmez kapının durumu
-                                    da
-                                    değişecektir.</p>
-                            </details>
-                            <details>
-                                <summary>İstifleyici</summary>
-                                <br>
-                                <p>İstifleyici, belirttiğiniz ayarlara göre aynı eşyayı belirtilen konuma göre
-                                    spawnlar.</p>
-                            </details>
-                            <details>
-                                <summary>Kopyalayıcı</summary>
-                                <br>
-                                <p>Oyun içerisinde yaptığınız yapıları kaydetmenize olanak sağlar. İlk önce bir konum
-                                    seçersiniz, bu genellikle aşağıdan olur; sonrasında ise yapınız bittiği yerin
-                                    yukarısını
-                                    seçersiniz ve kaydedersiniz.</p>
-                            </details>
-                            <details>
-                                <summary>Buddies</summary>
-                                <br>
-                                <p>Yararlı şeyler kategorisinde yer alır. Yaptığınız yapıların arkadaşlarınızda
-                                    taşınmasına
-                                    veya silinmesine olanak veren bir sistemdir.</p>
-                            </details>
+                        <div class="accordion" id="toolgunAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseMaterial" aria-expanded="true"
+                                            aria-controls="collapseMaterial">
+                                        Materyal
+                                    </button>
+                                </h2>
+                                <div id="collapseMaterial" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Nesnenin materyalini değiştirmenizi sağlar. Örneğin ahşap yapabilir, metal
+                                        yapabilirsiniz.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseColor" aria-expanded="false"
+                                            aria-controls="collapseColor">
+                                        Renk
+                                    </button>
+                                </h2>
+                                <div id="collapseColor" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Nesneyi boyamanızı sağlar. Örneğin kırmızıya boyayabilirsiniz.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseAngleTool" aria-expanded="false"
+                                            aria-controls="collapseAngleTool">
+                                        Açı-Matik
+                                    </button>
+                                </h2>
+                                <div id="collapseAngleTool" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Nesnenin yönünü X, Y, Z koordinatları belirterek değiştirmenizi sağlar. Örneğin
+                                        bir nesneyi çapraz bakacak şekilde ayarlayabilirsiniz.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseInvisibleDoor" aria-expanded="false"
+                                            aria-controls="collapseInvisibleDoor">
+                                        Görünmez Kapı
+                                    </button>
+                                </h2>
+                                <div id="collapseInvisibleDoor" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Görünmez kapıya bir aktifleştirme tuşu atayıp aynı zamanda düğme ile keypad aynı
+                                        tuşları atarsanız, bunlardan çıkacak doğru ya da yanlış cevaba göre görünmez
+                                        kapının durumu da değişecektir.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseStacker" aria-expanded="false"
+                                            aria-controls="collapseStacker">
+                                        İstifleyici
+                                    </button>
+                                </h2>
+                                <div id="collapseStacker" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        İstifleyici, belirttiğiniz ayarlara göre aynı eşyayı belirtilen konuma göre
+                                        spawnlar.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseDuplicator" aria-expanded="false"
+                                            aria-controls="collapseDuplicator">
+                                        Kopyalayıcı
+                                    </button>
+                                </h2>
+                                <div id="collapseDuplicator" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Oyun içerisinde yaptığınız yapıları kaydetmenize olanak sağlar. İlk önce bir
+                                        konum seçersiniz, bu genellikle aşağıdan olur; sonrasında ise yapınız bittiği
+                                        yerin yukarısını seçersiniz ve kaydedersiniz.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseBuddies" aria-expanded="false"
+                                            aria-controls="collapseBuddies">
+                                        Buddies
+                                    </button>
+                                </h2>
+                                <div id="collapseBuddies" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Yararlı şeyler kategorisinde yer alır. Yaptığınız yapıların arkadaşlarınızda
+                                        taşınmasına veya silinmesine olanak veren bir sistemdir.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
 
                     <hr>
@@ -653,23 +747,178 @@
                             etüt merkezini ziyaret ediniz.
                         </div>
                         <p>Daha fazla XP kazanmak için şu yollar mevcuttur:</p>
-                        <ul>
-                            <li><strong>[MG] Etiketi:</strong> Steam hesabınızın profil ismi düzenleme kısmına gidin.
-                                Profilinizi düzenleyerek profil adınızın sonuna [MG] ekleyin; bu sayede alacağınız XP
-                                miktarı artacaktır.
+                        <ul style='list-style-type: "> "'>
+                            <li><strong class="text-primary-emphasis">[MG] Etiketi:</strong> Steam hesabınızın profil
+                                ismi düzenleme kısmına gidin. Profilinizi düzenleyerek profil adınızın sonuna [MG]
+                                ekleyin; bu sayede alacağınız XP miktarı artacaktır.
                             </li>
-                            <li><strong>İmam:</strong> Oyunda kendinizi imam üfletebilirsiniz. Bu, size ölene kadar veya
-                                meslek değiştirene kadar %25 daha fazla XP kazandıracaktır.
+                            <li><strong class="text-success-emphasis">İmam:</strong> Oyunda kendinizi imam
+                                üfletebilirsiniz. Bu, size ölene kadar veya meslek değiştirene kadar %25 daha fazla XP
+                                kazandıracaktır.
                             </li>
-                            <li><strong>VIP, VIP+ Satın Alma:</strong> VIP veya VIP+ alarak XP değerlerinizi, VIP ya da
-                                VIP+ süreniz boyunca artırabilirsiniz.
+                            <li><strong class="text-secondary">VIP, VIP+ Satın Alma:</strong> VIP veya VIP+ alarak XP
+                                değerlerinizi, VIP ya da VIP+ süreniz boyunca artırabilirsiniz.
                             </li>
-                            <li><strong>Happy Hours:</strong> Oyunda 18:00 - 24:00 arasında geçerli olan 2x XP
-                                fırsatıdır.
+                            <li><strong class="text-danger-emphasis">Happy Hours:</strong> Oyunda 18:00 - 24:00 arasında
+                                geçerli olan 2x XP fırsatıdır.
                             </li>
-                            <li>Bazı saatlerde üstatlar tarafından x2/x4 XP açılmaktadır.</li>
-                            <li>XP eşyaları satın alabilirsiniz.</li>
+                            <li><strong class="text-primary-emphasis">Etüt merkezi:</strong> Geçici olarak öğrenme
+                                becerilerinizi geliştirir.
+                            </li>
+                            <li><strong class="text-success-emphasis">Baskın:</strong> Baskınlarda ele geçirilen
+                                araçlardan kazanabilirsiniz. <span
+                                        class="text-danger-emphasis">(Baskın süresi boyunca)</span></li>
+                            <li><strong class="text-secondary">Bazı saatlerde üstadlar tarafından x2/x4 XP
+                                açılmaktadır.</strong></li>
+                            <li><strong class="text-danger-emphasis">XP eşyaları satın alabilirsiniz.</strong></li>
                         </ul>
+
+                    </div>
+
+                    <hr>
+                    <br>
+
+                    <div>
+                        <h3 id="meslekperm">Ücretli Meslekler neler?</h3>
+
+                        <ul style='list-style-type: "— ";'>
+                            <li><strong class="text-primary-emphasis">Vergi Rekortmeni:</strong> Vergi ödenen her şeyden
+                                komisyon alıyorsun. Bu sayede, gelirini artırabilirsin.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Premium Galeri Sahibi:</strong> Premium araç
+                                galerisindeki NPC'lerden komisyon alarak para kazanıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Etüt Merkezi Sahibi:</strong> Etüt Merkezindeki
+                                NPC'lerden komisyon alarak öğrenim sürecine katkıda bulunuyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Eczane Sahibi:</strong> Nöbetçi eczanedeki NPC'den
+                                komisyon alarak sağlık sektöründe yer alıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Garaj Sahibi:</strong> Galeride araç çıkarma
+                                sırasında kesilen vergiden komisyon alıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Galeri Sahibi:</strong> Galerideki NPC'lerden
+                                komisyon alarak aracını satıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Gazino Sahibi:</strong> Gazinodaki faaliyetlerden
+                                komisyon alıyorsun ve eğlence dünyasında yer alıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Kuyumcu:</strong> Kendi Döviz NPC'sinden yapılan
+                                alım/satım işlemlerinde komisyon kazanıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Moonexchange Sahibi:</strong> Bankadaki döviz
+                                NPC'sinden yapılan alım/satım işlemlerinden komisyon alıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-danger-emphasis">İhaleci:</strong> Kendi NPC aracılığıyla Kirli
+                                dolarları temizleyerek kazanç elde ediyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-danger-emphasis">Gece Kulübü Sahibi:</strong> Gece kulübündeki
+                                NPC'lerden komisyon alıyor ve aynı zamanda Kirli dolarları temizliyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Hastane Sahibi:</strong> Doktor NPC'den komisyon
+                                alarak
+                                sağlık sektöründe yer ediniyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-danger-emphasis">Emlakçı:</strong> Kiralardan komisyon alıyor ve
+                                Kirli dolarları temizliyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-danger-emphasis">Sigortacı:</strong> Kirli dolarları temizleyerek
+                                sigorta sektöründe iş yapıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-danger-emphasis">Lojistik:</strong> Kirli dolarları temizleyerek
+                                tedarik
+                                zincirinde yer alıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-danger-emphasis">Ekspertiz:</strong> Kirli dolarları temizleyerek
+                                değerleme yapıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Balıkçı:</strong> Balık NPC'den komisyon alarak
+                                deniz ürünleri ticareti yapıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Doğal Kaynaklar İşletmesi Sahibi:</strong>
+                                Madenlerdeki
+                                NPC'lerden komisyon alıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Moonshop Dükkanı Sahibi:</strong> Moonshop
+                                içindeki NPC'den ve dolaptan komisyon alıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Restoran Sahibi:</strong> Yemek NPC'lerinden
+                                komisyon alarak gıda sektöründe yer alıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-danger-emphasis">İthalci:</strong> İthal malları alıp yurtdışına
+                                gönderiyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-danger-emphasis">Botanikçi:</strong> Bitkileri alıp yurtdışına
+                                pazarla
+                                para kazanıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Sosyal Medya Sahibi:</strong> Sosyal medyada
+                                paylaşım yaparken ödenen vergiden komisyon alıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Benzinlik Sahibi:</strong> Benzinlikteki NPC'den
+                                komisyon alıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Reklamcı:</strong> /reklam komutunu
+                                kullanıldığında
+                                ödenen vergiden komisyon alıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Mekanik Sahibi:</strong> Mekanikteki NPC'den
+                                komisyon alıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-danger-emphasis">Güzellik Salonu Sahibi:</strong> Kirli dolarları
+                                temizleyerek güzellik sektöründe yer alıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-danger-emphasis">Yatırım Danışmanı:</strong> Kirli dolarları
+                                temizleyerek
+                                yatırım fırsatları sağlıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Polis Tedarikçisi:</strong> Polis karakolundaki
+                                NPC'den komisyon alıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Taksi Durağı Sahibi:</strong> Taksi NPC'den
+                                komisyon alıyor ve taksi durağının sahibi oluyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-primary-emphasis">Depo Sahibi:</strong> Envanterden depoya eşya
+                                atıldığında vergiden komisyon alıyorsun.
+                            </li>
+                            <br>
+                            <li><strong class="text-danger-emphasis">Muhasebeci:</strong> Kirli dolarları temizleyerek
+                                finans
+                                sektöründe yer alıyorsun.
+                            </li>
+                        </ul>
+
+
                     </div>
 
                     <hr>
@@ -681,64 +930,153 @@
                         <div class="alert alert-warning" role="alert">
                             Aksi belirtilmedikçe katkı sağladıkları XP, 15 dakikada gelen XP'dir.
                         </div>
-                        <details>
-                            <summary>XP Eşyaları</summary>
-                            <br>
-                            <ul>
-                                <div class="alert alert-info" role="alert">
-                                    Hem 1. Seviye Saat hem de 2. Seviye Saat olması durumunda sadece 2. Seviye Saat
-                                    çalışmaktadır.
+                        <div class="accordion" id="accordionItems">
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed text-warning-emphasis" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#xpItemsCollapse"
+                                            aria-expanded="true" aria-controls="xpItemsCollapse">
+                                        XP Eşyaları
+                                    </button>
+                                </h2>
+                                <div id="xpItemsCollapse" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <div class="alert alert-info" role="alert">
+                                            Hem 1. Seviye Saat hem de 2. Seviye Saat olması durumunda sadece 2. Seviye
+                                            Saat çalışmaktadır.
+                                        </div>
+                                        <ul style="list-style-type: '- '">
+                                            <li><strong class="text-primary-emphasis">XP Bileti:</strong> 1 saat boyunca
+                                                2x XP bonusu sağlar. Kutulardan çıkmaz.
+                                            </li>
+                                            <li><strong class="text-success-emphasis">Just'un Kutsanmış Bebeği:</strong>
+                                                %50 XP bonusu sağlar. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-secondary">1. Seviye Saat:</strong> %10 XP bonusu
+                                                sağlar. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-danger-emphasis">2. Seviye Saat:</strong> %25 XP
+                                                bonusu sağlar. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-primary-emphasis">3. Seviye Saat:</strong> %50 XP
+                                                bonusu sağlar. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-success-emphasis">Kaliteli Viski:</strong> Sahip
+                                                olduğunuz tüm saatlerin çalışmasını sağlar. Kutulardan çıkmaz.
+                                            </li>
+                                            <li><strong class="text-secondary">1. Seviye Özel Eşya Toplama XP
+                                                Artışı:</strong> Kirli dolar ve bitki üretimini tamamladığınızda (E
+                                                tuşuna basarken) %10 XP bonusu sağlar. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-danger-emphasis">2. Seviye Özel Eşya Toplama XP
+                                                Artışı:</strong> Kirli dolar ve bitki üretimini tamamladığınızda (E
+                                                tuşuna basarken) %15 XP bonusu sağlar. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-primary-emphasis">3. Seviye Özel Eşya Toplama XP
+                                                Artışı:</strong> Kirli dolar ve bitki üretimini tamamladığınızda (E
+                                                tuşuna basarken) %20 XP bonusu sağlar. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-secondary">Baronun Prosu:</strong> %10 XP bonusu
+                                                sağlar. Kutulardan çıkmaz. <strong>Barona hizmet edenler tarafından elde
+                                                    edilir.</strong></li>
+                                            <li><strong class="text-danger-emphasis">Baronun Emaneti:</strong> %50 XP
+                                                bonusu sağlar. Kutulardan çıkmaz. <strong>Baronun en sadık adamlarına
+                                                    verilir.</strong></li>
+                                            <li><strong class="text-success-emphasis">Çakmak:</strong> %10 XP bonusu
+                                                sağlar. Kutulardan çıkmaz.
+                                            </li>
+                                            <li><strong class="text-secondary">Dambıl:</strong> %20 XP bonusu sağlar.
+                                                Kutulardan çıkmaz.
+                                            </li>
+                                            <li><strong class="text-primary-emphasis">Baston Şeker:</strong> %30 XP
+                                                bonusu sağlar. Kutulardan çıkmaz.
+                                            </li>
+                                            <li><strong class="text-danger-emphasis">Defibrilatör:</strong> Baygın
+                                                birini kaldırdığınızda %15 daha fazla XP verir. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-primary-emphasis">İngiliz Anahtarı:</strong>
+                                                Belediye işlerinde %?? daha fazla XP sağlar.
+                                            </li>
+                                            <li><strong class="text-success-emphasis">İmamın Abdest Suyu:</strong>
+                                                İmamdan aldığınız XP bonusunu %?? oranında artırır. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-secondary">Fileto Bıçağı:</strong> Balıklardan elde
+                                                edilen tecrübeyle kazandığınız XP'yi %?? artırır. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-primary-emphasis">Beylik Tabancası:</strong> Para
+                                                basma makinelerini ve bitkileri yok ettiğinizde kazandığınız XP'yi %??
+                                                artırır. Kutulardan çıkar. <span class="text-primary-emphasis">(Devlet çalışanları için geçerlidir)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <br>
-                                <li><strong>XP Bileti:</strong> 1 saatliğine 2x XP bonusu sağlar. Kutulardan çıkmaz.
-                                </li>
-                                <li><strong>Just'un Kutsanmış Bebeği:</strong> %50 XP bonusu sağlar. Kutulardan çıkar.
-                                </li>
-                                <li><strong>1. Seviye Saat:</strong> %10 XP bonusu sağlar. Kutulardan çıkar.</li>
-                                <li><strong>2. Seviye Saat:</strong> %25 XP bonusu sağlar. Kutulardan çıkar.</li>
-                                <li><strong>3. Seviye Saat:</strong> %50 XP bonusu sağlar. Kutulardan çıkar.</li>
-                                <li><strong>Kaliteli Viski:</strong> Her seviyedeki saatlerinizin çalışmasını sağlar.
-                                    Kutulardan çıkmaz.
-                                </li>
-                                <li><strong>1. Seviye Özel Eşya Toplama XP Boost:</strong> Ot ve uyuşturucu toplarken
-                                    %10 XP bonusu sağlar. Kutulardan çıkar.
-                                </li>
-                                <li><strong>2. Seviye Özel Eşya Toplama XP Boost:</strong> Ot ve uyuşturucu toplarken
-                                    %15 XP bonusu sağlar. Kutulardan çıkar.
-                                </li>
-                                <li><strong>3. Seviye Özel Eşya Toplama XP Boost:</strong> Ot ve uyuşturucu toplarken
-                                    %20 XP bonusu sağlar. Kutulardan çıkar.
-                                </li>
-                                <li><strong>Baronun Prosu:</strong> %10 XP bonusu sağlar. Kutulardan çıkmaz. <strong>Barona
-                                    hizmet edenler elde eder.</strong></li>
-                                <li><strong>Baronun Emaneti:</strong> %50 XP bonusu sağlar. Kutulardan çıkmaz. <strong>Baronun
-                                    en sadık adamlarına verilmektedir.</strong></li>
-                                <li><strong>Çakmak:</strong> %10 XP bonusu sağlar. Kutulardan çıkmaz.</li>
-                                <li><strong>Dambıl:</strong> %20 XP bonusu sağlar. Kutulardan çıkmaz.</li>
-                                <li><strong>Baston Şeker:</strong> %30 XP bonusu sağlar. Kutulardan çıkmaz.</li>
-                            </ul>
-                        </details>
-                        <br>
-                        <details>
-                            <summary>Diğer Eşyalar</summary>
-                            <br>
-                            <ul>
-                                <li><strong>Ay Taşı (Tek seferlik kullanım):</strong> Ölünce üzerinizdeki shipment,
-                                    silah, ot ve kara para eşyalarının düşmesini önler. Madencideki NPC'den
-                                    üretilebilir.
-                                </li>
-                                <li><strong>Okunmuş Su:</strong> Zırh bastığınızda +50 ekler. Kutulardan çıkar.</li>
-                                <li><strong>Zırhlı Kasa:</strong> Deponuza 1 sayfa daha ekler. Kutulardan çıkar.</li>
-                                <li><strong>Deri Çanta:</strong> Envanterinize 1 sayfa daha ekler. Kutulardan çıkar.
-                                </li>
-                                <li><strong>İlk Yardım Çantası:</strong> Mevcut canınıza +100 can daha ekler. Kutulardan
-                                    çıkar.
-                                </li>
-                                <li><strong>Just'ın İndirim Kuponu:</strong> Galeri vb. yerlerde %10 indirimli satın
-                                    alabilirsiniz. Kutulardan çıkar.
-                                </li>
-                            </ul>
-                        </details>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed text-info-emphasis" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#otherItemsCollapse"
+                                            aria-expanded="false" aria-controls="otherItemsCollapse">
+                                        Diğer Eşyalar
+                                    </button>
+                                </h2>
+                                <div id="otherItemsCollapse" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <ul style="list-style-type: '* '">
+                                            <li><strong class="text-secondary">Ay Taşı (Tek seferlik kullanım):</strong>
+                                                Ölünce envanterinizdeki shipment, silah vb. düşebilen eşyalarınızın
+                                                düşmesini önler. Madencideki NPC'den üretilebilir.
+                                            </li>
+                                            <li><strong class="text-primary-emphasis">Torpil kağıdı:</strong> %50 daha
+                                                fazla maaş almanı sağlar.
+                                            </li>
+                                            <li><strong class="text-danger-emphasis">Madenci Kitabı:</strong> Maden
+                                                toplarken daha fazla maden alırsınız.
+                                            </li>
+                                            <li><strong class="text-success-emphasis">Odunculuk Kitabı:</strong> Odun
+                                                keserken daha fazla odun alırsınız.
+                                            </li>
+                                            <li><strong class="text-primary-emphasis">Balıkçılık Kitabı:</strong> Balık
+                                                tutarken daha fazla balık alırsınız.
+                                            </li>
+                                            <li><strong class="text-secondary">Okunmuş Su:</strong> Zırh bastığınızda
+                                                +50 ekler. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-primary-emphasis">Zırhlı Kasa:</strong> Deponuza 1
+                                                sayfa daha ekler. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-secondary">Deri Çanta:</strong> Envanterinize 1
+                                                sayfa daha ekler. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-danger-emphasis">İlk Yardım Çantası:</strong> Mevcut
+                                                canınıza +100 can daha ekler. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-primary-emphasis">Just'ın İndirim Kuponu:</strong>
+                                                Galeri vb. yerlerde %10 indirimli satın alabilirsiniz. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-success-emphasis">Cesaret Hapı (Tek seferlik
+                                                kullanım):</strong> 2 dakikalığına vücudun yüksek miktarda adrenalin
+                                                (HP) salgılar. Sonrasında aşırı adrenalin nedeniyle kalp krizi
+                                                geçirirsiniz. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-secondary">İthal Gübre:</strong> Bitki üretimini
+                                                tamamlarken +1 bitki verir.
+                                            </li>
+                                            <li><strong class="text-danger-emphasis">Çek Defteri:</strong> Kirli dolar
+                                                temizlerken %?? NPC'ye daha az komisyon ödersiniz. Kutulardan çıkar.
+                                            </li>
+                                            <li><strong class="text-success-emphasis">Tüccarın Cüzdanı:</strong> Para
+                                                basma makinesindeki parayı %?? artırır. Kutulardan çıkar.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
                     </div>
 
                     <hr>
@@ -786,25 +1124,8 @@
     </button>
 </div>
 
-<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-    <symbol id="check2" viewBox="0 0 16 16">
-        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-    </symbol>
-    <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-    </symbol>
-    <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-    </symbol>
-    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-    </symbol>
-</svg>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/scripts.js"></script>
-<script src="../assets/js/colorSchema.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const places = [
@@ -841,7 +1162,7 @@
             {
                 image: "../assets/image/darkrp_plaza.jpg",
                 title: "Plaza/Gazino",
-                description: "Burada oda kiralayıp illegal aktiviteler gerçekleştirebilirsiniz. Ayrıca girişte bir gazino bulunmaktadır."
+                description: "Burada oda kiralayıp Bitki yetiştiriciliği gibi aktiviteler gerçekleştirebilirsiniz. Ayrıca girişte bir gazino bulunmaktadır."
             },
             {
                 image: "../assets/image/darkrp_mekanik.jpg",
@@ -851,12 +1172,12 @@
             {
                 image: "../assets/image/darkrp_saatkulesi.jpg",
                 title: "Saat Kulesi",
-                description: "Genellikle baron ve sefirin toplu illegal aktiviteler yürüttüğü mekandır."
+                description: "Genellikle baron ve sefirin toplu aktiviteler yürüttüğü mekandır."
             },
             {
                 image: "../assets/image/darkrp_sevgiapartmanı.jpg",
                 title: "Sevgi Apartmanı",
-                description: "İllegal aktiviteler yürütebileceğiniz yeni bir alandır."
+                description: "Bitki yetiştirme vb. aktiviteler yürütebileceğiniz yeni bir alandır."
             },
             {
                 image: "../assets/image/darkrp_galeri.jpg",
@@ -886,7 +1207,7 @@
             {
                 image: "../assets/image/darkrp_fabrikalar.jpg",
                 title: "Fabrikalar",
-                description: "İllegal aktiviteler yürütebileceğiniz yeni bir alandır."
+                description: "Bitki yetiştirme vb. aktiviteler yürütebileceğiniz yeni bir alandır."
             },
             {
                 image: "../assets/image/darkrp_benzinlik.jpg",
@@ -901,7 +1222,7 @@
             {
                 image: "../assets/image/darkrp_gol.jpg",
                 title: "Göl",
-                description: "İllegal aktiviteler yürütebileceğiniz yeni bir alandır. Ayrıca balıkçı mesleğine geçip burada balık tutabilirsiniz."
+                description: "Bitki yetiştirme vb. aktiviteler yürütebileceğiniz yeni bir alandır. Ayrıca balıkçı mesleğine geçip burada balık tutabilirsiniz."
             },
             {
                 image: "../assets/image/darkrp_keke.jpg",
@@ -916,7 +1237,7 @@
             {
                 image: "../assets/image/darkrp_nisantasi.jpg",
                 title: "Nişantaşı",
-                description: "İllegal aktiviteler yürütebileceğiniz yeni bir alandır."
+                description: "Bitki yetiştirme vb. aktiviteler yürütebileceğiniz yeni bir alandır."
             },
             {
                 image: "../assets/image/darkrp_korsan.jpg",
@@ -939,8 +1260,6 @@
     </div>
     `;
             cardContainer.appendChild(card);
-
-            // Modal oluşturma
             const modal = document.createElement("div");
             modal.className = "modal fade";
             modal.id = `modal${index}`;

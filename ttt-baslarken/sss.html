@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr" data-bs-theme="dark">
 <head>
@@ -58,196 +57,256 @@
             <div class="content pt-3">
                 <h1 class="mb-4">Sıkça Sorulan Sorular</h1>
                 <hr>
-                <h4 id="error"><b>Etrafta her şey error, ne yapmalıyım?</b></h4>
-                <div class="alert alert-danger" role="alert">
-                    <strong>Missing Map</strong> Hatası alıyor iseniz <a href="#tab4" data-bs-toggle="tab" role="tab"
-                                                                         aria-controls="tab4">Özel içerik indirme</a>
-                    göz atınız.
+                <div>
+                    <h4 id="error"><b>Etrafta her şey error, ne yapmalıyım?</b></h4>
+                    <div class="alert alert-danger" role="alert">
+                        <strong>Missing Map</strong> Hatası alıyor iseniz <a href="#tab4" data-bs-toggle="tab"
+                                                                             role="tab"
+                                                                             aria-controls="tab4">Özel içerik
+                        indirme</a>
+                        göz atınız.
+                    </div>
+                    <p>Gerekli workshopları indirdiğinizden emin olunuz.</p>
+                    <div class="content-ref-box">
+                        <p>
+                            <a id="baslarkenBox" href="#" target="_blank">
+                                <i class="fa-solid fa-graduation-cap"></i> TTT Başlarken - Gerekli Eklentiler ve Ayarlar
+                            </a>
+                        </p>
+                    </div>
+                    <br>
+                    <p>Eğer workshopların <b>hepsini indirmenize</b> rağmen <b>error</b> alıyorsanız, deneyebileceğiniz
+                        birkaç yol mevcut. Bunlar:</p>
+
+                    <ul class="nav nav-tabs" id="faqTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="tab4-tab" data-bs-toggle="tab" href="#tab4" role="tab"
+                               aria-controls="tab4" aria-selected="false">Özel İçerikleri indirme</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="tab1-tab" data-bs-toggle="tab" href="#tab1" role="tab"
+                               aria-controls="tab1" aria-selected="true">Oyun Dosyası Doğrulama</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="tab2-tab" data-bs-toggle="tab" href="#tab2" role="tab"
+                               aria-controls="tab2" aria-selected="false">Cache Klasörünü Silme</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="tab3-tab" data-bs-toggle="tab" href="#tab3" role="tab"
+                               aria-controls="tab3" aria-selected="false">Fabrika Ayarlarına Sıfırlama</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="faqTabContent">
+                        <div class="tab-pane fade" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                            <div class="row">
+                                <table class="table border-0">
+                                    <tr class="align-middle">
+                                        <td class="border-0 text-center" style="width: 50%;">
+                                            <img src="../assets/image/steam_ayarlar.png" alt="Steam Ayarları"
+                                                 class="img-fluid">
+                                        </td>
+                                        <td class="border-0">
+                                            <ol class="">
+                                                <li>İlk önce steam kütüphane geliniz.</li>
+                                                <li>Garry's Mod bulup sağ tıklayın.</li>
+                                                <li>Özellikler...</li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <td class="border-0 text-center" style="width: 50%;">
+                                            <img src="../assets/image/steam_yuklu_dosyalar.png"
+                                                 alt="Steam Yüklü Dosyalar"
+                                                 class="img-fluid">
+                                        </td>
+                                        <td class="border-0">
+                                            <ol start="4">
+                                                <li>Yüklü Dosyalar</li>
+                                                <li>"Oyun dosyaların bütünlüğünü doğrula" tıklayın.</li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                            <div class="row">
+                                <table class="table border-0">
+                                    <tr class="align-middle">
+                                        <td class="border-0 text-center" style="width: 50%;">
+                                            <img src="../assets/image/steam_ayarlar.png" alt="Steam Ayarları"
+                                                 class="img-fluid">
+                                        </td>
+                                        <td class="border-0">
+                                            <ol class="">
+                                                <li>İlk önce steam kütüphane geliniz.</li>
+                                                <li>Garry's Mod bulup sağ tıklayın.</li>
+                                                <li>Özellikler...</li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <td class="border-0 text-center" style="width: 50%;">
+                                            <img src="../assets/image/steam_yuklu_dosyalar.png"
+                                                 alt="Steam Yüklü Dosyalar"
+                                                 class="img-fluid">
+                                        </td>
+                                        <td class="border-0">
+                                            <ol start="4">
+                                                <li>Yüklü Dosyalar</li>
+                                                <li>"Göz at..." tıklayın.</li>
+                                                <li>"garrysmod" klasörüne gidiniz.</li>
+                                                <li>"cache" klasörünü siliniz.</li>
+                                                <li>"download" klasörü var ise siliniz.</li>
+                                                <li>"downloadlist" klasörü var ise siliniz.</li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                            <div class="row">
+                                <table class="table border-0">
+                                    <tr class="align-middle">
+                                        <td class="border-0 text-center" style="width: 50%;">
+                                            <img src="../assets/image/steam_ayarlar.png" alt="Steam Ayarları"
+                                                 class="img-fluid">
+                                        </td>
+                                        <td class="border-0">
+                                            <ol class="">
+                                                <li>İlk önce steam kütüphane geliniz.</li>
+                                                <li>Garry's Mod bulup sağ tıklayın.</li>
+                                                <li>Özellikler...</li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <td class="border-0 text-center" style="width: 50%;">
+                                            <img src="../assets/image/steam_yuklu_dosyalar.png"
+                                                 alt="Steam Yüklü Dosyalar"
+                                                 class="img-fluid">
+                                        </td>
+                                        <td class="border-0">
+                                            <ol start="4">
+                                                <li>Yüklü Dosyalar</li>
+                                                <li>"Göz at..." tıklayın.</li>
+                                                <li>"FactoryReset-Gmod" dosyasına çift tıklayın.</li>
+                                                <li>Y/N sorusuna "Y" yazınız.</li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade show active" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+                            <div class="row">
+                                <table class="table border-0">
+                                    <tr class="align-middle">
+                                        <td class="border-0 text-center" style="width: 50%;">
+                                            <img src="../assets/image/gmod_dosya.png" alt="Garry's Mod Ayarları"
+                                                 class="img-fluid">
+                                        </td>
+                                        <td class="border-0">
+                                            <ol class="">
+                                                <li>Garry's mod açın</li>
+                                                <li>Oyun Sekmesine Gelin</li>
+                                                <li>"Oyun sunucusu bilgisayarınıza özel içerik indirmeyi denediğinde"
+                                                    kısmın
+                                                    altındaki button gelin
+                                                </li>
+                                                <li>"Sunucudaki özel dosyaları indir" seçiniz.</li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p>Gerekli workshopları indirdiğinizden emin olunuz.</p>
-                <div class="content-ref-box">
-                    <p>
-                        <a id="baslarkenBox" href="#" target="_blank">
-                            <i class="fa-solid fa-graduation-cap"></i> TTT Başlarken - Gerekli Eklentiler ve Ayarlar
-                        </a>
-                    </p>
+
+                <hr>
+                <div>
+                    <h4 id="gpumemory"><b>"This typically means you are running out of Video Memory on your GPU" hatası
+                        alıyorum?</b></h4>
+
+                    <li>
+                        <a href="https://support.microsoft.com/tr-tr/topic/en-son-directx-s%C3%BCr%C3%BCm%C3%BCn%C3%BC-y%C3%BCkleme-d1f5ffa5-dae2-246c-91b1-ee1e973ed8c2#:~:text=DirectX%2C%20Windows'da%20bulunan%2C,%C3%A7al%C4%B1%C5%9Fmas%C4%B1n%C4%B1%20sa%C4%9Flayan%20bir%20bile%C5%9Fen%20k%C3%BCmesidir."
+                           target="_blank"> DirectX</a> güncel olduğundan emin olunuz.
+                    </li>
+                    <li>Ekran kartınızın sürücü güncel olduğundan emin olunuz</li>
+                    <li>Garry's Mod Sistem gereksinimlerini karşıladığından emin olunuz.</li>
                 </div>
-                <br>
-                <p>Eğer workshopların <b>hepsini indirmenize</b> rağmen <b>error</b> alıyorsanız, deneyebileceğiniz
-                    birkaç yol mevcut. Bunlar:</p>
+                <hr>
+                <div>
+                    <h4 id="modeldetayi">Oyunda görüntüler kesik kesik; bir taraf var, bir taraf yok. Görüntüler iç içe
+                        girmiş. Ne yapmam gerekiyor?</h4>
+                    <p>ESC tuşuna basınız, ardından "Oyun Ayarları"na basınız. Görüntü kısmına gelerek "Gelişmiş"e
+                        tıklayınız ve ardından "Model Detayları"nı yüksek seviyeye ayarlayınız. Ancak, bu değişikliği
+                        yaptığınızda oyundan donup kapanabilir. O yüzden bu değişikliği yaparken üzerinde Bio-organ vb
+                        kullanmamış olmanızı öneririz.</p>
 
-                <ul class="nav nav-tabs" id="faqTabs" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="tab4-tab" data-bs-toggle="tab" href="#tab4" role="tab"
-                           aria-controls="tab4" aria-selected="false">Özel İçerikleri indirme</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="tab1-tab" data-bs-toggle="tab" href="#tab1" role="tab"
-                           aria-controls="tab1" aria-selected="true">Oyun Dosyası Doğrulama</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="tab2-tab" data-bs-toggle="tab" href="#tab2" role="tab"
-                           aria-controls="tab2" aria-selected="false">Cache Klasörünü Silme</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="tab3-tab" data-bs-toggle="tab" href="#tab3" role="tab"
-                           aria-controls="tab3" aria-selected="false">Fabrika Ayarlarına Sıfırlama</a>
-                    </li>
-                </ul>
-
-                <div class="tab-content" id="faqTabContent">
-                    <div class="tab-pane fade" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-                        <div class="row">
-                            <table class="table border-0">
-                                <tr class="align-middle">
-                                    <td class="border-0 text-center" style="width: 50%;">
-                                        <img src="../assets/image/steam_ayarlar.png" alt="Steam Ayarları"
-                                             class="img-fluid">
-                                    </td>
-                                    <td class="border-0">
-                                        <ol class="">
-                                            <li>İlk önce steam kütüphane geliniz.</li>
-                                            <li>Garry's Mod bulup sağ tıklayın.</li>
-                                            <li>Özellikler...</li>
-                                        </ol>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td class="border-0 text-center" style="width: 50%;">
-                                        <img src="../assets/image/steam_yuklu_dosyalar.png" alt="Steam Yüklü Dosyalar"
-                                             class="img-fluid">
-                                    </td>
-                                    <td class="border-0">
-                                        <ol start="4">
-                                            <li>Yüklü Dosyalar</li>
-                                            <li>"Oyun dosyaların bütünlüğünü doğrula" tıklayın.</li>
-                                        </ol>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-                        <div class="row">
-                            <table class="table border-0">
-                                <tr class="align-middle">
-                                    <td class="border-0 text-center" style="width: 50%;">
-                                        <img src="../assets/image/steam_ayarlar.png" alt="Steam Ayarları"
-                                             class="img-fluid">
-                                    </td>
-                                    <td class="border-0">
-                                        <ol class="">
-                                            <li>İlk önce steam kütüphane geliniz.</li>
-                                            <li>Garry's Mod bulup sağ tıklayın.</li>
-                                            <li>Özellikler...</li>
-                                        </ol>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td class="border-0 text-center" style="width: 50%;">
-                                        <img src="../assets/image/steam_yuklu_dosyalar.png" alt="Steam Yüklü Dosyalar"
-                                             class="img-fluid">
-                                    </td>
-                                    <td class="border-0">
-                                        <ol start="4">
-                                            <li>Yüklü Dosyalar</li>
-                                            <li>"Göz at..." tıklayın.</li>
-                                            <li>"garrysmod" klasörüne gidiniz.</li>
-                                            <li>"cache" klasörünü siliniz.</li>
-                                        </ol>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-                        <div class="row">
-                            <table class="table border-0">
-                                <tr class="align-middle">
-                                    <td class="border-0 text-center" style="width: 50%;">
-                                        <img src="../assets/image/steam_ayarlar.png" alt="Steam Ayarları"
-                                             class="img-fluid">
-                                    </td>
-                                    <td class="border-0">
-                                        <ol class="">
-                                            <li>İlk önce steam kütüphane geliniz.</li>
-                                            <li>Garry's Mod bulup sağ tıklayın.</li>
-                                            <li>Özellikler...</li>
-                                        </ol>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td class="border-0 text-center" style="width: 50%;">
-                                        <img src="../assets/image/steam_yuklu_dosyalar.png" alt="Steam Yüklü Dosyalar"
-                                             class="img-fluid">
-                                    </td>
-                                    <td class="border-0">
-                                        <ol start="4">
-                                            <li>Yüklü Dosyalar</li>
-                                            <li>"Göz at..." tıklayın.</li>
-                                            <li>"FactoryReset-Gmod" dosyasına çift tıklayın.</li>
-                                            <li>Y/N sorusuna "Y" yazınız.</li>
-                                        </ol>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade show active" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
-                        <div class="row">
-                            <table class="table border-0">
-                                <tr class="align-middle">
-                                    <td class="border-0 text-center" style="width: 50%;">
-                                        <img src="../assets/image/gmod_dosya.png" alt="Garry's Mod Ayarları"
-                                             class="img-fluid">
-                                    </td>
-                                    <td class="border-0">
-                                        <ol class="">
-                                            <li>Garry's mod açın</li>
-                                            <li>Oyun Sekmesine Gelin</li>
-                                            <li>"Oyun sunucusu bilgisayarınıza özel içerik indirmeyi denediğinde" kısmın
-                                                altındaki button gelin
-                                            </li>
-                                            <li>"Sunucudaki özel dosyaları indir" seçiniz.</li>
-                                        </ol>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
                 </div>
 
                 <hr>
-                <h4 id="gpumemory"><b>"This typically means you are running out of Video Memory on your GPU" hatası
-                    alıyorum?</b></h4>
-
-                <li>
-                    <a href="https://support.microsoft.com/tr-tr/topic/en-son-directx-s%C3%BCr%C3%BCm%C3%BCn%C3%BC-y%C3%BCkleme-d1f5ffa5-dae2-246c-91b1-ee1e973ed8c2#:~:text=DirectX%2C%20Windows'da%20bulunan%2C,%C3%A7al%C4%B1%C5%9Fmas%C4%B1n%C4%B1%20sa%C4%9Flayan%20bir%20bile%C5%9Fen%20k%C3%BCmesidir."
-                       target="_blank"> DirectX</a> güncel olduğundan emin olunuz.
-                </li>
-                <li>Ekran kartınızın sürücü güncel olduğundan emin olunuz</li>
-                <li>Garry's Mod Sistem gereksinimlerini karşıladığından emin olunuz.</li>
+                <div>
+                    <h4 id="csscontent">Pembe-Siyah Hatasını nasıl çözebilirim?</h4>
+                    <p>Workshoplarınız tamam ve düzgün ise büyük olasılıkla CS:S content'ten kaynaklı bir sorun çözmek için CS:S indiriniz.</p>
+                    <div class="content-ref-box">
+                        <p>
+                            <a id="cssBox" href="#">
+                                <i class="fa-solid fa-cubes"></i> CS:S Content Nasıl İndiririm?
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <h4 id="console"><b>Konsol/Console Nedir?</b></h4>
+                    <p>oyuncuların oyun içindeki komutları girerek çeşitli işlemler yapmalarını sağlayan bir araçtır. Bu
+                        konsol sayesinde oyun ayarlarını değiştirmek, hata ayıklamak gibi işlemler
+                        gerçekleştirilebilir.</p>
+                </div>
 
                 <hr>
-                <h4 id="tus"><b>Tuşlarım çalışmıyor, neden?</b></h4>
-                <p>Bir problem oluşmuş olabilir, oyun ayarlarından klavye menüsüne gelerek varsayılan düzeye geçip
-                    sorunu kontrol edebilirsiniz.</p>
-                <p>Eğer sorun çözülmez ise konsolu (` tuşu) açınız ve aşağıdaki komutları yazınız.</p>
-                <li><code>unbindall</code></li>
-                <li><code>exec config_default.cfg</code></li>
-
+                <div>
+                    <h4 id="tus"><b>Tuşlarım çalışmıyor, neden?</b></h4>
+                    <p>Bir problem oluşmuş olabilir, oyun ayarlarından klavye menüsüne gelerek varsayılan düzeye geçip
+                        sorunu kontrol edebilirsiniz.</p>
+                    <p>Eğer sorun çözülmez ise konsolu (` tuşu) açınız ve aşağıdaki komutları yazınız.</p>
+                    <li><code>unbindall</code></li>
+                    <li><code>exec config_default.cfg</code></li>
+                </div>
                 <hr>
-                <h4 id="mikrofon"><b>Oyunda sesim diğer oyunculara gitmiyor, ne yapmalıyım?</b></h4>
-                <p>İlk önce oyun ayarlarından iletişim sekmesinden mikrofonunuzu test etmelisiniz. Ardından mikrofon
-                    ayarlarına girip Steam arayüzüne yönlendirecek ve orada mikrofonunuzu seçmelisiniz. Test yaptığınız
-                    halde ses gitmiyorsa, Windows ayarlarınızdan kontrol etmeniz gerekebilir. Sanal mikrofon
-                    uygulamaları varsa bunları devre dışı bırakıp tekrar deneyiniz.</p>
-
+                <div>
+                    <h4 id="mikrofon"><b>Oyunda sesim diğer oyunculara gitmiyor, ne yapmalıyım?</b></h4>
+                    <p>İlk önce oyun ayarlarından iletişim sekmesinden mikrofonunuzu test etmelisiniz. Ardından mikrofon
+                        ayarlarına girip Steam arayüzüne yönlendirecek ve orada mikrofonunuzu seçmelisiniz. Test
+                        yaptığınız
+                        halde ses gitmiyorsa, Windows ayarlarınızdan kontrol etmeniz gerekebilir. Sanal mikrofon
+                        uygulamaları varsa bunları devre dışı bırakıp tekrar deneyiniz.</p>
+                </div>
                 <hr>
 
+                <div>
+                    <h4 id="adminyok"><b>Oyunda yetkili yok ve oyuncudan şikayetçiyim. Ne yapmalıyım?</b></h4>
+                    <p>Gerekli delilleri toplayarak MoonGaming Discord sunucusuna gelip ticket açmanız
+                        gerekmektedir.</p>
+                </div>
+                <hr>
+                <div>
+                    <h4 id="bantemyiz"><b>Sunucudan uzaklaştırıldım, nasıl itiraz edebilirim?</b></h4>
+                    <p>MoonGaming Discord sunucusuna gelip ticket açmanız gerekmektedir.</p>
+                </div>
+                <hr>
+                <div>
+                    <h4 id="admin"><b>Yetkili nasıl olabilirim?</b></h4>
+                    <p>Yetkili olabilmek için TTT Üstadları ile iletişime geçmelisiniz.</p>
+                </div>
             </div>
         </main>
 
@@ -276,27 +335,11 @@
     </button>
 </div>
 
-<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-    <symbol id="check2" viewBox="0 0 16 16">
-        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-    </symbol>
-    <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-    </symbol>
-    <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-    </symbol>
-    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-    </symbol>
-</svg>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/scripts.js"></script>
-<script src="../assets/js/colorSchema.js"></script>
 <script>
     document.getElementById("baslarkenBox").href = URL + "/ttt-baslarken#gerekli-eklentiler-ve-ayarlar";
+    document.getElementById("cssBox").href = URL + "/content";
 </script>
 </body>
 </html>
