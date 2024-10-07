@@ -39,22 +39,6 @@
 }
 
 
-[data-bs-theme="light"] {
-    --link-color: #24292e;
-    --link-active-color: #0366d6;
-    --border-color: #e1e4e8;
-    --border-color-light: #f6f8fa;
-    --scrollbar-track: #f1f3f5;
-    --scrollbar-thumb: #d1d5da;
-    --scrollbar-thumb-hover: #6a737d;
-    --dropdown-hover-bg: #f0f0f0;
-    --header1: #3B82F6;
-    --header2: #10B981;
-    --header3: #F87171;
-    --header4: #A855F7;
-    --header5: #FB923C;
-}
-
 body {
     font-family: "Inter", sans-serif;
 }
@@ -83,41 +67,41 @@ nav {
 }
 
 #left-menu {
-    font-size: 10pt;
+font-size: 10pt;
 }
 
 #mainmenu {
-    margin: 0.2%;
-    border-bottom: 2px solid var(--border-color);
+margin: 0.2%;
+border-bottom: 2px solid var(--border-color);
 }
 
 #left-sidebar,
 #right-sidebar {
-    height: 100vh;
-    position: sticky;
-    top: 5%;
-    overflow-y: auto;
+height: 100vh;
+position: sticky;
+top: 5%;
+overflow-y: auto;
 }
 
 #left-sidebar::after,
 #right-sidebar::after {
-    content: "";
-    display: block;
-    height: 50px;
+content: "";
+display: block;
+height: 50px;
 }
 
 #mobileBookmarks .nav-link,
 #right-sidebar .nav-link,
 #left-sidebar .nav-link {
-    color: var(--link-color);
+color: var(--link-color);
 }
 
 #mobileBookmarks .nav-link.active,
 #top-menu .nav-link.active,
 #right-sidebar .nav-link.active,
 #left-sidebar .nav-link.active {
-    color: var(--link-active-color);
-    font-weight: bold;
+color: var(--link-active-color);
+font-weight: bold;
 }
 
 #right-sidebar .nav-link,
@@ -132,20 +116,20 @@ nav {
 }
 
 #darkrplegal-d .nav-link {
-    border-left-color: blue;
+border-left-color: blue;
 }
 
 #darkrpesnaf-d .nav-link {
-    border-left-color: green;
+border-left-color: green;
 }
 
 #darkrpillegal-d .nav-link {
-    border-left-color: red;
+border-left-color: red;
 }
 
 #theme-toggle svg {
-    width: 1.2rem;
-    height: 1.2rem;
+width: 1.2rem;
+height: 1.2rem;
 }
 
 [data-bs-theme="dark"] #theme-toggle svg {
@@ -212,13 +196,13 @@ nav {
 #left-menu .nav-item,
 #left-menu .nav-link,
 #left-menu .dropdown-wrapper {
-    height: 100%;
-    width: 100%;
+height: 100%;
+width: 100%;
 }
 
 #left-menu .nav-link-container:hover,
 #left-menu .dropdown-item-container:hover {
-    background-color: var(--dropdown-hover-bg);
+background-color: var(--dropdown-hover-bg);
 }
 
 .content-ref-box {
@@ -294,34 +278,34 @@ main .img-fluid img {
 }
 
 #career-tree {
-    border: 1px solid transparent;
-    border-radius: 8px;
-    padding: 20px;
+border: 1px solid transparent;
+border-radius: 8px;
+padding: 20px;
 }
 #career-tree ul {
-    list-style-type: none;
+list-style-type: none;
 }
 
 #career-tree .tree ul {
 
-    margin: 0;
-    padding-left: 1.5rem;
+margin: 0;
+padding-left: 1.5rem;
 }
 
 #career-tree .tree li {
-    margin: 0 0 10px 0;
-    position: relative;
+margin: 0 0 10px 0;
+position: relative;
 }
 
 #career-tree .caret {
-    cursor: pointer;
-    user-select: none;
-    font-weight: bold;
+cursor: pointer;
+user-select: none;
+font-weight: bold;
 }
 
 #career-tree .caret i {
-    margin-right: 6px;
-    transition: transform 0.3s ease;
+margin-right: 6px;
+transition: transform 0.3s ease;
 }
 .tree li {
     margin: 0 0 10px 0;
@@ -329,11 +313,11 @@ main .img-fluid img {
 }
 
 #career-tree .nested {
-    display: none;
+display: none;
 }
 
 #career-tree .active {
-    display: block;
+display: block;
 }
 
 ::-webkit-scrollbar {
@@ -354,11 +338,11 @@ main .img-fluid img {
 
 @media (max-width: 767px) {
     #mobileBookmarks {
-        display: block;
+    display: block;
     }
 
     #left-sidebar {
-        display: none;
+    display: none;
     }
 
     .navbar-nav {
@@ -366,7 +350,7 @@ main .img-fluid img {
     }
 
     #mainmenu {
-        margin: 0;
+    margin: 0;
     }
     .category-item {
         padding: 7px 12px;
@@ -401,7 +385,7 @@ main .img-fluid img {
         padding: 5px 10px;
         border-bottom: 0;
     }
-    
+
     .mobile-content {
         display: block;
     }
@@ -409,15 +393,15 @@ main .img-fluid img {
 
 @media (min-width: 768px) {
     #mobileBookmarks {
-        display: none;
+    display: none;
     }
 
     #left-sidebar {
-        display: block;
+    display: block;
     }
 
     #mainmenu img {
-        margin-left: 1.50%;
+    margin-left: 1.50%;
     }
 
     .navbar-nav {
